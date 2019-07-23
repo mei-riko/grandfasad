@@ -1,0 +1,30 @@
+.navbar{
+    .navbar__link{
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        &--active{
+            text-transform: none;
+            letter-spacing: 0px;
+            &:before{
+                content: '— ';
+            }
+        }
+
+        &:hover{
+            text-decoration: none;
+            color: $blue;
+        }
+    }
+}
+
+.index{
+    .navbar{
+        margin-top: 60px;
+        .navbar__item{
+            & + .navbar__item{
+                margin-top: 40px;
+            }
+        }
+    }
+}

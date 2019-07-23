@@ -1,16 +1,43 @@
 html(lang="ru")
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        meta(http-equiv="X-UA-Compatible", content="ie=edge")
-        title Basic Page
-
-        link(href='./css/style.css', rel='stylesheet')
-
-    body
+    include chunks/head.pug
+    body.index
         script(src="http://code.jquery.com/jquery-3.3.1.min.js")
         include chunks/header.pug
-
+        main
+            section.slider.slider_index
+                .slider__content.slider__content_fixed
+                    h1.slider__title Панели из&nbsp;натурального камня для&nbsp;интерьера и&nbsp;внешней отделки
+                    p.slider__intro Неповторимый каменный узор складывается в&nbsp;причудливый орнамент, который обязательно 
+                        | станет гармоничным дополнением оформления вашего дома.
+                    a.btn.btn_dark(href="/caralog.html") В каталог
+                .slider__image
+                    .slider__item(style="background-image: url('/img/demo-bg-1.jpg');")
+                    .slider__item(style="background-image: url('/img/demo-bg-2.jpg');")
+            section.content
+                .container
+                    .row
+                        .col-xl-3
+                            p.content__title Преимущества панелей из камня
+                        .col-xl-8
+                            p.content__intro Материал полностью экологичный и гипоаллергенный, идеально подходит для отделки как фасадов домов и зданий, так и для декора интерьера. Панели из камня морозостойкие, не восприимчивы к влаге и другим даже самым агрессивным внешним воздействиям, что обеспечивает вечный срок службы.
+                            .advantage.row
+                                .col-xl-6.advantage__item
+                                    p.advantage__number 001
+                                    p.advantage__title Вечный материал
+                                    p.advantage__content Камень не изнашивается и не стирается, в отличие от других покрытий
+                                .col-xl-6.advantage__item
+                                    p.advantage__number 002
+                                    p.advantage__title Простой монтаж
+                                    p.advantage__content Укладка панелей не требует специальных навыков и материалов
+                                .col-xl-6.advantage__item
+                                    p.advantage__number 003
+                                    p.advantage__title Универсальность 
+                                    p.advantage__content Панели из камня идеально подходят для интерьера и фасада
+                                .col-xl-6.advantage__item
+                                    p.advantage__number 004
+                                    p.advantage__title Уникальный дизайн
+                                    p.advantage__content Каждый рисунок панели - неповторимое сочетание каменных узоров и цветов 
         include chunks/footer.pug
         script(src="./js/jquery.inputmask.js")
+        script(src="./js/slick.min.js")
         script(src="./js/app.min.js")

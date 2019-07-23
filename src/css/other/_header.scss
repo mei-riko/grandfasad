@@ -1,0 +1,37 @@
+.header{
+    padding: 60px 0;
+    .header__logo{
+        width: 270px;
+        height: 40px;
+        max-width: 100%;
+
+        background: url("/img/logo.png") no-repeat left center / contain;
+
+        margin-bottom: 60px;
+    }
+    .header__phone{
+        font-weight: 700;
+        letter-spacing: 2px;
+        &:hover{
+            color: $blue;
+            text-decoration: none;
+        }
+    }
+    .header__call{
+        font-size: 12px;
+        color: $blue;
+        text-decoration: underline;
+        &:hover{
+            color: $grey;
+        }
+    }
+}
+
+.index{
+    .header{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+}
