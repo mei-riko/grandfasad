@@ -2638,6 +2638,11 @@ small,
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 2;
+}
+
+.index .header .header__col {
+  background: #ffffff;
 }
 
 .btn {
@@ -2692,7 +2697,7 @@ small,
 }
 
 .index .navbar .navbar__item + .navbar__item {
-  margin-top: 40px;
+  margin-top: 30px;
 }
 
 .slider {
@@ -2706,7 +2711,8 @@ small,
   background: #ffffff;
   max-width: 100%;
   width: 580px;
-  padding: 60px 30px;
+  padding: 60px;
+  padding-left: 0;
   z-index: 2;
 }
 
@@ -2753,6 +2759,7 @@ small,
 .slider_index {
   max-width: calc( 25% + 700px);
   margin-left: auto;
+  z-index: 11;
 }
 
 .slider_index .slider__item {
@@ -2777,4 +2784,19 @@ small,
   font-size: 1.15rem;
   line-height: 1.5em;
   margin-bottom: 2.25rem;
+}
+
+.content {
+  padding: 100px 0;
+}
+
+.content .content__title {
+  font-weight: 700;
+  letter-spacing: 2px;
+  background: #ffffff;
+  text-transform: uppercase;
+}
+
+.content .content__intro {
+  margin-bottom: 60px;
 }

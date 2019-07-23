@@ -1,1 +1,12 @@
-.content{}
+.content{
+    padding: 100px 0;
+    .content__title{
+        font-weight: 700;
+        letter-spacing: 2px;
+        background: $white;
+        text-transform: uppercase;
+    }
+    .content__intro{
+        margin-bottom: 60px;
+    }
+}

@@ -10,7 +10,8 @@
             max-width: 100%;
             width: 580px;
 
-            padding: 60px 30px;
+            padding: 60px;
+            padding-left: 0;
 
             z-index: 2;
         }
@@ -56,6 +57,7 @@
     &_index{
         max-width: calc( 25% + 700px );
         margin-left: auto;
+        z-index: 11;
         
         .slider__item{
             height: 90vh;
