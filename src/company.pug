@@ -1,0 +1,101 @@
+html(lang="ru")
+    include chunks/head.pug
+    body.company
+        script(src="http://code.jquery.com/jquery-3.3.1.min.js")
+        include chunks/header.pug
+        main
+            section.slider.slider_index
+                .slider__content.slider__content_fixed
+                    h1.slider__title.text-bold О компании «ГрандФасад»
+                    p.slider__intro Компания занимается производством и реализацией модульных панелей из натурального камня.  Используем в работе российское сырье - сланец, песчаник, кварцит. 
+                    p.slider__intro  Панели - это единый модуль, состоящий из склеенных между собой фрагментов камня. Каждый фрагмент имеет неровную поверхность, что позволяет придать изделию «объем» природного материала.  
+                .slider__image
+                    .slider__item(style="background-image: url('/img/demo-bg-1.jpg');")
+                    .slider__item(style="background-image: url('/img/demo-bg-2.jpg');")
+            section.content.advantage
+                .container
+                    .row
+                        .col-xl-3
+                            p.content__title особенности панелей из&nbsp;натурального камня
+                        .col-xl-8
+                            .row
+                                .col-xl-6.advantage__item.advantage__item_icon.advantage__item_icon--eco
+                                    p.advantage__title Экологичные
+                                    p.advantage__content.last Панели производятся из натурального отечественного сырья, 
+                                        | а&nbsp;компания заботится об&nbsp;экологичности производства
+                                .col-xl-6.advantage__item.advantage__item_icon.advantage__item_icon--universal
+                                    p.advantage__title Уникальные
+                                    p.advantage__content.last Панели из камня универсальны. Они подчеркивают оригинальный интерьер и гармонично дополняют фасад.
+                                .col-xl-6.advantage__item.advantage__item_icon.advantage__item_icon--allergy
+                                    p.advantage__title Гипоаллергенные
+                                    p.advantage__content.last Не покрывается мхом и плесенью. Камень устойчив к воздействиям влаги и к перепадам температур.
+                                .col-xl-6.advantage__item.advantage__item_icon.advantage__item_icon--time
+                                    p.advantage__title долговечные
+                                    p.advantage__content.last Срок эксплуатации - от 100 лет. Материал не деформируется, не выцветает и не разрушается при любых условиях.
+            section.content
+                .container
+                    .row.align-items-center
+                        .col-xl-7
+                            img.img-fluid(src="/img/products-type-01.png")
+                        .col-xl-5
+                            .content__col_pl
+                                p.h4 Вы всегда можете приехать к нам и лично  
+                                    span.text-bold убедиться в качестве товара
+                                p.item__desc.last Приходите в офис и посмотрите на все образцы панелей из камня. Менеджер проконсультирует вас и поможет подобрать подходящий вариант.
+            section.content
+                .container
+                    p.content__title.h1.text-center Виды панелей из камня
+                    p.text-center(style="margin:0 auto 2.25rem;width:600px;max-width:100%;") Приходите в офис и посмотрите на все образцы панелей из камня. Менеджер проконсультирует вас и поможет подобрать подходящий вариант.
+                    .row
+                        .col-xl-3
+                            img.img-fluid(src="/img/product-1.jpg" style="height: 95px;")
+                        .col-xl-3
+                            img.img-fluid(src="/img/product-2.jpg" style="height: 95px;")
+                        .col-xl-3
+                            img.img-fluid(src="/img/product-3.jpg" style="height: 95px;")
+                        .col-xl-3
+                            img.img-fluid(src="/img/product-4.jpg" style="height: 95px;")
+                    .row.justify-content-center
+                        .col-xl-8
+                            p.h4.text-center Оставьте заявку перед визитом и мы 
+                                span.text-bold подготовим образцы
+                            form.form.form_block
+                                p.form__title Заполните общую информацию и укажите желаемую дату
+                                input.form__input.form__input_placeholder-top(type="text" placeholder="Фамилия имя отчество")
+                                .form__group
+                                    input.form__input.phone(type="tel" placeholder="Телефон для связи")
+                                    input.form__input.datapicker(type="text" placeholder="Дата посещения")
+                                .form__group
+                                    button.btn.btn_dark(type="submit") получить расчёт
+                                .form__agree.checkbox
+                                    input.checkbox__input#agree(type="checkbox" name="agree" checked="checked" required="required")
+                                    label.checkbox__label(for="agree") согласен с 
+                                        a.checkbox__link(href="/assets/files/documents/policy.pdf" target="_blank") политикой конфиденциальности
+            section.content.content_dark.content_border-bottom
+                .container
+                    .row
+                        .col-xl-3
+                            p.content__title партнерская программа
+                        .col-xl-7
+                            p.content__intro Материал полностью экологичный и гипоаллергенный, идеально подходит для отделки как фасадов домов и зданий, так и для декора интерьера. Панели из камня морозостойкие, не восприимчивы к влаге и другим даже самым агрессивным внешним воздействиям, что обеспечивает вечный срок службы.
+                            .item.item_padding
+                                p.item__title.text-bold.text-uppercase магазинам
+                                p.item__desc.item__desc_full Компания "Гранд фасад" открыта для сотрудничества с магазинами, торговыми домами и выставочными центрами. Мы предоставляем выгодные условия по реализации нашей продукции на Ваших торговых или выставочных площадях. Для&nbsp;получения подробной информации просим направить Ваш запрос на эл. почту.
+                            .item.item_padding
+                                p.item__title.text-bold.text-uppercase магазинам
+                                p.item__desc.item__desc_full Компания "Гранд фасад" открыта для сотрудничества с магазинами, торговыми домами и выставочными центрами. Мы предоставляем выгодные условия по реализации нашей продукции на Ваших торговых или выставочных площадях. Для&nbsp;получения подробной информации просим направить Ваш запрос на эл. почту.
+                            .item.item_padding
+                                p.item__title.text-bold.text-uppercase магазинам
+                                p.item__desc.item__desc_full Компания "Гранд фасад" открыта для сотрудничества с магазинами, торговыми домами и выставочными центрами. Мы предоставляем выгодные условия по реализации нашей продукции на Ваших торговых или выставочных площадях. Для&nbsp;получения подробной информации просим направить Ваш запрос на эл. почту.
+                            .item.item_padding
+                                p.item__title.text-bold.text-uppercase магазинам
+                                p.item__desc.item__desc_full Компания "Гранд фасад" открыта для сотрудничества с магазинами, торговыми домами и выставочными центрами. Мы предоставляем выгодные условия по реализации нашей продукции на Ваших торговых или выставочных площадях. Для&nbsp;получения подробной информации просим направить Ваш запрос на эл. почту.
+                            .item.item_padding
+                                p.item__title.text-bold.text-uppercase магазинам
+                                p.item__desc.item__desc_full Компания "Гранд фасад" открыта для сотрудничества с магазинами, торговыми домами и выставочными центрами. Мы предоставляем выгодные условия по реализации нашей продукции на Ваших торговых или выставочных площадях. Для&nbsp;получения подробной информации просим направить Ваш запрос на эл. почту.
+
+        include chunks/footer.pug
+        
+        script(src="./js/jquery.inputmask.js")
+        script(src="./js/slick.min.js")
+        script(src="./js/app.min.js")

@@ -1,0 +1,59 @@
+.footer{
+    background: $grey;
+    color: $white;
+    .footer__row{
+        padding: 40px 0;
+    }
+
+    .footer__logo{
+        width: 200px;
+        height: 40px;
+        max-width: 100%;
+
+        background: url("/img/logo_inverse.png") no-repeat left center / contain;
+    }
+    .footer__link{
+        color: $white;
+        &:hover{
+            color: $light;
+        }
+    }
+    .footer__contact{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        display: flex;
+        justify-content: flex-end;
+
+        @extend .small;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+
+        color: #8d8d8d;
+
+        .footer__item + .footer__item{
+            margin-left: 20px;
+        }
+
+        .footer__link{
+            color: #8d8d8d;
+            &:hover{
+                color: $light;
+            }
+        }
+    }
+    .footer__info{
+        font-size: 10px;
+        color: #8d8d8d;
+        background: darken($color: $grey, $amount: 5%);
+        padding-top: 1.25rem;
+        .footer__link{
+            color: #8d8d8d;
+            text-decoration: underline;
+            &:hover{
+                color: $light;
+            }
+        }
+    }
+}

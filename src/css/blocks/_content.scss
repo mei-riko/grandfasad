@@ -1,12 +1,50 @@
 .content{
     padding: 100px 0;
+    .content__col{
+        &_pl{
+            padding-left: 40px;
+        }
+        &_pr{
+            padding-right: 40px;
+        }
+    }
     .content__title{
         font-weight: 700;
         letter-spacing: 2px;
-        background: $white;
+        // background: $white;
         text-transform: uppercase;
+        &_full{
+            @extend .h1;
+            margin-bottom: 60px;
+        }
     }
     .content__intro{
         margin-bottom: 60px;
+    }
+
+    .row + .row{
+        padding-top: 80px;
+    }
+
+    &_border-bottom{
+        border-bottom: 1px solid darken($grey,10%);
+    }
+    &_dark{
+        background: $grey;
+        color: $white;
+    }
+}
+
+.index{
+    .content{
+        &.advantage{
+            .content__title{
+                &_fixed{
+                    position: fixed;
+                    top: 230px;
+                    max-width: calc(25% - 40px);
+                }
+            }
+        }
     }
 }

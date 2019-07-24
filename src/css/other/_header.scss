@@ -6,8 +6,6 @@
         max-width: 100%;
 
         background: url("/img/logo.png") no-repeat left center / contain;
-
-        margin-bottom: 60px;
     }
     .header__phone{
         font-weight: 700;
@@ -29,15 +27,18 @@
 
 .index{
     .header{
-        position: fixed;
+        position: absolute;
         top: 0;
         left: 0;
         width: 100%;
 
-        z-index: 2;
+        // z-index: 2;
 
         .header__col{
-            background: $white;
+            // background: $white;
+        }
+        .header__logo{
+            margin-bottom: 40px;
         }
     }
 }

@@ -1,4 +1,14 @@
 .navbar{
+    &_inline{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        .navbar__item{
+            margin: 0 10px;
+        }
+    }
+    
     .navbar__link{
         font-size: 12px;
         text-transform: uppercase;
@@ -10,7 +20,6 @@
                 content: '— ';
             }
         }
-
         &:hover{
             text-decoration: none;
             color: $blue;
@@ -18,13 +27,29 @@
     }
 }
 
-.index{
-    .navbar{
+.index,.company{
+    .header .navbar{
         margin-top: 60px;
         .navbar__item{
             & + .navbar__item{
                 margin-top: 30px;
             }
+        }
+    }
+}
+
+.footer .navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    .navbar__item{
+        margin: 0 10px;
+    }
+    .navbar__link{
+        color: $white;
+        &:hover{
+            color: $light;
         }
     }
 }

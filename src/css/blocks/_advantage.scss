@@ -1,0 +1,35 @@
+.advantage{
+
+    & + .content{
+        padding-top: 0;
+    }
+
+    &__item{
+        margin-bottom: 30px;
+        &.mb-0{
+            margin-bottom: 0;
+        }
+    }
+    .advantage__number{
+        background: $light;
+        color: $white;
+        font-size: 2.5rem;
+        font-weight: bold;
+        line-height: 1.5em;
+
+        display: inline-block;
+
+        margin-bottom: 30px;
+    }
+    .advantage__title{
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
+    .advantage__content{
+        @extend .small;
+        width: 320px;
+        max-width: 100%;
+    }
+}
