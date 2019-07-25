@@ -42,7 +42,7 @@ html(lang="ru")
                                 p.h4 Вы всегда можете приехать к нам и лично  
                                     span.text-bold убедиться в качестве товара
                                 p.item__desc.last Приходите в офис и посмотрите на все образцы панелей из камня. Менеджер проконсультирует вас и поможет подобрать подходящий вариант.
-            section.content.content_pt-none
+            section.content
                 .container
                     p.content__title.h1.text-center Виды панелей из камня
                     p.text-center(style="margin:0 auto 2.25rem;width:600px;max-width:100%;") Приходите в офис и посмотрите на все образцы панелей из камня. Менеджер проконсультирует вас и поможет подобрать подходящий вариант.
@@ -56,25 +56,21 @@ html(lang="ru")
                         .col-xl-3
                             img.img-fluid(src="/img/product-4.jpg" style="height: 95px;")
                     .row.justify-content-center
-                        .col-xl-7
+                        .col-xl-8
                             p.h4.text-center Оставьте заявку перед визитом и мы 
                                 span.text-bold подготовим образцы
-                            form.form.form_block.form_mt
+                            form.form.form_block
                                 p.form__title Заполните общую информацию и укажите желаемую дату
-                                .form__content
-                                    .form__group.form__group_full
-                                        input.form__input.form__input_placeholder-top(type="text" placeholder="Фамилия имя отчество")
-                                    .form__group
-                                        input.form__input.form__input_placeholder-top.phone(type="tel" placeholder="Телефон для связи")
-                                    .form__group
-                                        input.form__input.form__input_placeholder-top.datapicker(type="date" placeholder="Дата посещения")
-                                    .form__group
-                                        .form__agree.checkbox
-                                            input.checkbox__input#agree(type="checkbox" name="agree" checked="checked" required="required")
-                                            label.checkbox__label(for="agree") согласен с 
-                                                a.checkbox__link(href="/assets/files/documents/policy.pdf" target="_blank") политикой конфиденциальности
-                                    .form__group
-                                        button.btn.btn_dark(type="submit") получить расчёт
+                                input.form__input.form__input_placeholder-top(type="text" placeholder="Фамилия имя отчество")
+                                .form__group
+                                    input.form__input.phone(type="tel" placeholder="Телефон для связи")
+                                    input.form__input.datapicker(type="text" placeholder="Дата посещения")
+                                .form__group
+                                    button.btn.btn_dark(type="submit") получить расчёт
+                                .form__agree.checkbox
+                                    input.checkbox__input#agree(type="checkbox" name="agree" checked="checked" required="required")
+                                    label.checkbox__label(for="agree") согласен с 
+                                        a.checkbox__link(href="/assets/files/documents/policy.pdf" target="_blank") политикой конфиденциальности
             section.content.content_dark.content_border-bottom
                 .container
                     .row

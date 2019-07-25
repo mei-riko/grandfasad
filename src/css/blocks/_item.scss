@@ -3,9 +3,7 @@
         position: relative;
         z-index: 11;
     }
-    &_padding{
-        padding-left: 180px;
-    }
+    
     .item__title{
         position: relative;
         margin-bottom: 1rem;
@@ -49,5 +47,9 @@
             margin-right: 0;
             margin-left: auto;
         }
+    }
+    // Col With Padding
+    &_padding{
+        padding-left: 180px;
     }
 }

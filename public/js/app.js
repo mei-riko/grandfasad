@@ -87,6 +87,15 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
     return false;
   });
 
+  // Input mask
+  if ((0, _jquery2.default)('.phone').length > 0) {
+    (0, _jquery2.default)(".phone").inputmask({
+      mask: "8 999 999 99 99",
+      placeholder: " ",
+      showMaskOnHover: true
+    });
+  }
+
   // Index Slider
   (0, _jquery2.default)('.slider .slider__image').slick({
     slidesToShow: 1,

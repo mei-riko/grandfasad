@@ -9,7 +9,38 @@
         &.mb-0{
             margin-bottom: 0;
         }
+        // Item With Icon
+        &_icon{
+            position: relative;
+            padding-left: 120px;
+            &:before{
+                content: '';
+                display: block;
+
+                position: absolute;
+                top: 0;
+                left: 20px;
+
+                width: 60px;
+                height: 60px;
+                background: #dad1c0;
+            }
+
+            &--eco:before{
+                background: #dad1c0 url('/img/icon/eco_w.svg') no-repeat center / 30px;
+            }
+            &--universal:before{
+                background: #dad1c0 url('/img/icon/universal_w.svg') no-repeat center / 30px;
+            }
+            &--allergy:before{
+                background: #dad1c0 url('/img/icon/health_w.svg') no-repeat center / 26px;
+            }
+            &--time:before{
+                background: #dad1c0 url('/img/icon/time_w.svg') no-repeat center / 36px;
+            }
+        }
     }
+
     .advantage__number{
         background: $light;
         color: $white;
@@ -25,7 +56,11 @@
         font-weight: 700;
         letter-spacing: 2px;
         text-transform: uppercase;
-        margin-bottom: 20px;
+        margin-bottom: 0;
+        
+        & + *{
+            margin-top: 20px;
+        }
     }
     .advantage__content{
         @extend .small;

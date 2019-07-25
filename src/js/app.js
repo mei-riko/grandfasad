@@ -1,23 +1,32 @@
 import $ from 'jquery'
 $(document).ready(() =>{
-    $("a.scroll").click(function() {
-        $("html, body").animate({
-           scrollTop: $($(this).attr("href")).offset().top + "px"
-        }, {
-           duration: 500,
-           easing: "swing"
-        });
-        return false;
-    });
+  $("a.scroll").click(function() {
+      $("html, body").animate({
+          scrollTop: $($(this).attr("href")).offset().top + "px"
+      }, {
+          duration: 500,
+          easing: "swing"
+      });
+      return false;
+  });
+
+  // Input mask
+  if( $('.phone').length > 0 ) {
+    $(".phone").inputmask({
+      mask: "8 999 999 99 99",
+      placeholder: " ",
+      showMaskOnHover: true
+    })
+  }
     
-    // Index Slider
-    $('.slider .slider__image').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: true,
-        dots: false,
-        fade: true,
-    });
+  // Index Slider
+  $('.slider .slider__image').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: true,
+      dots: false,
+      fade: true,
+  });
 
     // Navbar
     // if( $("body").scrollTop() > 100 ){

@@ -13,16 +13,12 @@
         font-size: 12px;
         text-transform: uppercase;
         letter-spacing: 1px;
-        &--active{
-            text-transform: none;
-            letter-spacing: 0px;
-            &:before{
-                content: '— ';
-            }
-        }
         &:hover{
             text-decoration: none;
             color: $blue;
+        }
+        &--active{
+            font-weight: 700;
         }
     }
 }
@@ -33,6 +29,16 @@
         .navbar__item{
             & + .navbar__item{
                 margin-top: 30px;
+            }
+        }
+        .navbar__link{
+            &--active{
+                text-transform: none;
+                letter-spacing: 0px;
+                font-weight: 400;
+                &:before{
+                    content: '— ';
+                }
             }
         }
     }

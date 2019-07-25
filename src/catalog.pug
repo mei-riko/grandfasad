@@ -1,0 +1,42 @@
+html(lang="ru")
+    include chunks/head.pug
+    body
+        script(src="http://code.jquery.com/jquery-3.3.1.min.js")
+        include chunks/header_inline.pug
+        main
+            section.content.content_header.advantage(style="background-image: url('/img/demo-bg-2.jpg');")
+                .container
+                    .row
+                        .col-xl-4
+                            h1.h1.text-bold Каталог продукции
+                            ul.breadcrumbs.breadcrumbs_light
+                                li.breadcrumbs__item
+                                    a.breadcrumbs__link(href="#") Главная
+                                li.sep /
+                                li.breadcrumbs__item Каталог
+                            p Подходит для фасада и интерьера. Панели из камня универсальны и смогут подчеркнуть оригинальный интерьер или стать гармоничным дополнением фасада. 
+                        .col-xl-8
+                            .row
+                                .col-xl-3.advantage__item
+                                    p.advantage__number 001
+                                    p.advantage__title Быстрый монтаж
+                                .col-xl-4.advantage__item
+                                    p.advantage__number 002
+                                    p.advantage__title Эксклюзивный дизайн
+                                .col-xl-5.advantage__item
+                                    p.advantage__number 003
+                                    p.advantage__title Экономия до 14.000 с м2
+                                .col-xl-3.advantage__item
+                                    p.advantage__number 004
+                                    p.advantage__title Экологичность
+                                .col-xl-4.advantage__item 
+                                    p.advantage__number 005
+                                    p.advantage__title Визуальная эстетика
+                                .col-xl-5.advantage__item
+                                    p.advantage__number 006
+                                    p.advantage__title Срок службы более 100 лет
+        include chunks/footer.pug
+        
+        script(src="./js/jquery.inputmask.js")
+        script(src="./js/slick.min.js")
+        script(src="./js/app.min.js")
