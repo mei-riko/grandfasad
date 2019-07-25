@@ -26,4 +26,11 @@
             color: $white;
         }
     }
+    &_border{
+        border: 1px solid $grey;
+
+        &:hover{
+            background: $light;
+        }
+    }
 }

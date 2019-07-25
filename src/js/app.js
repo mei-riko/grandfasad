@@ -20,12 +20,30 @@ $(document).ready(() =>{
   }
     
   // Index Slider
-  $('.slider .slider__image').slick({
+  $('.slider_index .slider__image').slick({
       slidesToShow: 1,
       slidesToScroll: 1,
       arrows: true,
       dots: false,
       fade: true,
+  });
+  
+  // Product Slider
+  $('.slider_for .slider__image').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true,
+    dots: false,
+    fade: true,
+    asNavFor: '.slider_for .slider__nav',
+  });
+  $('.slider__nav').slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    asNavFor: '.slider_for .slider__image',
+    dots: false,
+    centerMode: false,
+    focusOnSelect: true
   });
 
     // Navbar
@@ -42,7 +60,8 @@ $(document).ready(() =>{
     //     }
     // });
 
-    // Maps
+  // Maps
+  if( $('#map').length > 0 ) {
     var coordinates = {lat: 59.92577096038783, lng: 30.347231626510624};
 
     var map = new google.maps.Map(document.getElementById('map'), {
@@ -243,5 +262,5 @@ $(document).ready(() =>{
     marker.addListener('click', function() {
         infowindow.open(map, marker);
     });
-    
+  }
 });

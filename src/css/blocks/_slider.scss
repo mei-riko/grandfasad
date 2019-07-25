@@ -49,6 +49,25 @@
             background: $grey url("/img/right-arrow_w.svg") no-repeat center / 20px;         
         }
     }
+    .slider__nav{
+        margin-top: 40px;
+        .slick-track{
+            margin-left: 0;
+            .slider__item{
+                margin-right: 20px;
+                border: 6px solid;
+                border-color: rgba(255,255,255,0);
+                filter: grayscale(100%);
+
+                &.slick-current{
+                    border: 6px solid $grey;
+                }
+                &:focus{
+                    outline: none;
+                }
+            }
+        }
+    }
     .slider__item{
         width: 100%;
         height: auto;

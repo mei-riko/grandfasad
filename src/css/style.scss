@@ -21,6 +21,7 @@
 @import "other/nav.scss";
 @import "other/breadcrumbs.scss";
 @import "other/form.scss";
+@import "other/tab.scss";
 
 @import "blocks/slider.scss";
 @import "blocks/content.scss";
@@ -28,3 +29,11 @@
 @import "blocks/catalog.scss";
 @import "blocks/item.scss";
 @import "blocks/map.scss";
+
+.modal{
+    display: none;
+    &_callSmall{
+        width: 440px;
+        max-width: 100%;
+    }
+}

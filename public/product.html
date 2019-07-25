@@ -7,19 +7,18 @@
     <title>Basic Page</title>
     <link href="./css/slick.css" rel="stylesheet"/>
     <link href="./css/slick-theme.css" rel="stylesheet"/>
+    <link href="./css/jquery.fancybox.min.css" rel="stylesheet"/>
     <link href="./css/style.css" rel="stylesheet"/>
     <script async="async" defer="defer" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBkS1YFi2KvkMaaudj8A56Ova53LzyEsr4"></script>
   </head>
-  <body class="company">
+  <body>
     <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
     <header class="header">
       <div class="container">
-        <div class="row">
-          <div class="col-xl-3 header__col">
-            <div class="header__logo"></div>
-            <div class="header__link"><a class="header__phone" href="tel:89516878063">8 (951) 687-80-63</a></div>
-            <div class="header__link"><a class="header__call" id="callModal" href="#">Заказать звонок</a></div>
-            <nav class="navbar">
+        <div class="row align-items-center">
+          <div class="col-xl-3"><a class="header__logo" href="/"></a></div>
+          <div class="col-xl-6">
+            <nav class="navbar navbar_inline">
               <div class="navbar__item"><a class="navbar__link navbar__link--active" href="/">Главная</a></div>
               <div class="navbar__item"><a class="navbar__link" href="/catalog.html">Каталог продукции</a></div>
               <div class="navbar__item"><a class="navbar__link" href="/about.html">О компании</a></div>
@@ -27,123 +26,95 @@
               <div class="navbar__item"><a class="navbar__link" href="/contact.html">Контакты</a></div>
             </nav>
           </div>
+          <div class="col-xl-3 text-right">
+            <div class="header__link"><a class="header__phone" href="tel:89516878063">8 (951) 687-80-63</a></div>
+            <div class="header__link"><a class="header__call" id="callModal" href="#">Заказать звонок</a></div>
+          </div>
         </div>
       </div>
     </header>
     <main>
-      <section class="slider slider_index">
-        <div class="slider__content slider__content_fixed">
-          <h1 class="slider__title text-bold">О компании «ГрандФасад»</h1>
-          <p class="slider__intro">Компания занимается производством и реализацией модульных панелей из натурального камня.  Используем в работе российское сырье - сланец, песчаник, кварцит. </p>
-          <p class="slider__intro"> Панели - это единый модуль, состоящий из склеенных между собой фрагментов камня. Каждый фрагмент имеет неровную поверхность, что позволяет придать изделию «объем» природного материала.  </p>
-        </div>
-        <div class="slider__image">
-          <div class="slider__item" style="background-image: url('/img/demo-bg-1.jpg');"></div>
-          <div class="slider__item" style="background-image: url('/img/demo-bg-2.jpg');"></div>
-        </div>
-      </section>
-      <section class="content advantage">
+      <section class="content content_dark">
         <div class="container">
           <div class="row">
-            <div class="col-xl-3">
-              <p class="content__title">особенности панелей из&nbsp;натурального камня</p>
-            </div>
-            <div class="col-xl-8">
-              <div class="row">
-                <div class="col-xl-6 advantage__item advantage__item_icon advantage__item_icon--eco">
-                  <p class="advantage__title">Экологичные</p>
-                  <p class="advantage__content last">
-                    Панели производятся из натурального отечественного сырья, а&nbsp;компания заботится об&nbsp;экологичности производства</p>
-                </div>
-                <div class="col-xl-6 advantage__item advantage__item_icon advantage__item_icon--universal">
-                  <p class="advantage__title">Уникальные</p>
-                  <p class="advantage__content last">Панели из камня универсальны. Они подчеркивают оригинальный интерьер и гармонично дополняют фасад.</p>
-                </div>
-                <div class="col-xl-6 advantage__item advantage__item_icon advantage__item_icon--allergy">
-                  <p class="advantage__title">Гипоаллергенные</p>
-                  <p class="advantage__content last">Не покрывается мхом и плесенью. Камень устойчив к воздействиям влаги и к перепадам температур.</p>
-                </div>
-                <div class="col-xl-6 advantage__item advantage__item_icon advantage__item_icon--time">
-                  <p class="advantage__title">долговечные</p>
-                  <p class="advantage__content last">Срок эксплуатации - от 100 лет. Материал не деформируется, не выцветает и не разрушается при любых условиях.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="content">
-        <div class="container">
-          <div class="row align-items-center">
-            <div class="col-xl-7"><img class="img-fluid" src="/img/products-type-01.png"/></div>
-            <div class="col-xl-5">
-              <div class="content__col_pl">
-                <p class="h4">Вы всегда можете приехать к нам и лично  <span class="text-bold">убедиться в качестве товара</span></p>
-                <p class="item__desc last">Приходите в офис и посмотрите на все образцы панелей из камня. Менеджер проконсультирует вас и поможет подобрать подходящий вариант.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="content">
-        <div class="container">
-          <p class="content__title h1 text-center">Виды панелей из камня</p>
-          <p class="text-center" style="margin:0 auto 2.25rem;width:600px;max-width:100%;">Приходите в офис и посмотрите на все образцы панелей из камня. Менеджер проконсультирует вас и поможет подобрать подходящий вариант.</p>
-          <div class="row">
-            <div class="col-xl-3"><img class="img-fluid" src="/img/product-1.jpg" style="height: 95px;"/></div>
-            <div class="col-xl-3"><img class="img-fluid" src="/img/product-2.jpg" style="height: 95px;"/></div>
-            <div class="col-xl-3"><img class="img-fluid" src="/img/product-3.jpg" style="height: 95px;"/></div>
-            <div class="col-xl-3"><img class="img-fluid" src="/img/product-4.jpg" style="height: 95px;"/></div>
-          </div>
-          <div class="row justify-content-center">
-            <div class="col-xl-8">
-              <p class="h4 text-center">Оставьте заявку перед визитом и мы <span class="text-bold">подготовим образцы</span></p>
-              <form class="form form_block">
-                <p class="form__title">Заполните общую информацию и укажите желаемую дату</p>
-                <input class="form__input form__input_placeholder-top" type="text" placeholder="Фамилия имя отчество"/>
-                <div class="form__group">
-                  <input class="form__input phone" type="tel" placeholder="Телефон для связи"/>
-                  <input class="form__input datapicker" type="text" placeholder="Дата посещения"/>
-                </div>
-                <div class="form__group">
-                  <button class="btn btn_dark" type="submit">получить расчёт</button>
-                </div>
-                <div class="form__agree checkbox">
-                  <input class="checkbox__input" id="agree" type="checkbox" name="agree" checked="checked" required="required"/>
-                  <label class="checkbox__label" for="agree">согласен с <a class="checkbox__link" href="/assets/files/documents/policy.pdf" target="_blank">политикой конфиденциальности</a></label>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="content content_dark content_border-bottom">
-        <div class="container">
-          <div class="row">
-            <div class="col-xl-3">
-              <p class="content__title">партнерская программа</p>
-            </div>
             <div class="col-xl-7">
-              <p class="content__intro">Материал полностью экологичный и гипоаллергенный, идеально подходит для отделки как фасадов домов и зданий, так и для декора интерьера. Панели из камня морозостойкие, не восприимчивы к влаге и другим даже самым агрессивным внешним воздействиям, что обеспечивает вечный срок службы.</p>
-              <div class="item item_padding">
-                <p class="item__title text-bold text-uppercase">магазинам</p>
-                <p class="item__desc item__desc_full">Компания "Гранд фасад" открыта для сотрудничества с магазинами, торговыми домами и выставочными центрами. Мы предоставляем выгодные условия по реализации нашей продукции на Ваших торговых или выставочных площадях. Для&nbsp;получения подробной информации просим направить Ваш запрос на эл. почту.</p>
+              <div class="slider slider_for">
+                <div class="slider__image"><img class="slider__item" src="/img/demo-bg-1.jpg"/><img class="slider__item" src="/img/demo-bg-2.jpg"/></div>
+                <div class="slider__nav"><img class="slider__item" src="/img/demo-bg-1.jpg"/><img class="slider__item" src="/img/demo-bg-2.jpg"/></div>
               </div>
-              <div class="item item_padding">
-                <p class="item__title text-bold text-uppercase">магазинам</p>
-                <p class="item__desc item__desc_full">Компания "Гранд фасад" открыта для сотрудничества с магазинами, торговыми домами и выставочными центрами. Мы предоставляем выгодные условия по реализации нашей продукции на Ваших торговых или выставочных площадях. Для&nbsp;получения подробной информации просим направить Ваш запрос на эл. почту.</p>
+            </div>
+            <div class="col-xl-5">
+              <h1 class="h1 text-bold">Кварцит золотистый</h1>
+              <ul class="breadcrumbs breadcrumbs_light">
+                <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Главная</a></li>
+                <li class="sep">/</li>
+                <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Каталог</a></li>
+                <li class="sep">/</li>
+                <li class="breadcrumbs__item">Кварцит золотистый</li>
+              </ul>
+              <div class="product-info">
+                <div class="product-info__item">
+                  <div class="product-info__name">Артикул</div>
+                  <div class="product-info__val">008</div>
+                </div>
+                <div class="product-info__item">
+                  <div class="product-info__name">Вес упаковки</div>
+                  <div class="product-info__val">21 кг</div>
+                </div>
+                <div class="product-info__item">
+                  <div class="product-info__name">Размер панели</div>
+                  <div class="product-info__val">600х150х15 мм</div>
+                </div>
+                <div class="product-info__item">
+                  <div class="product-info__name">Количество</div>
+                  <div class="product-info__val">7 шт</div>
+                </div>
+                <div class="product-info__price">2 550 руб <span class="small">за м2</span></div>
+                <div class="product-info__btn"><a class="btn btn_dark" data-fancybox="data-fancybox" data-src="#productModal" href="javascript:;">Заказать панель</a>
+                  <div class="modal modal_callSmall" id="productModal">
+                    <p class="h4 text-bold">Заказ панели "Кварцит золотистый"</p>
+                    <form class="form">
+                      <div class="form__group">
+                        <input class="form__input form__input_full phone" type="tel" placeholder="Телефон для связи"/>
+                        <button class="btn btn_dark" type="submit" style="width: 100%;margin-top:20px;">получить расчёт</button>
+                      </div>
+                      <div class="form__agree checkbox">
+                        <input class="checkbox__input" id="agree" type="checkbox" name="agree" checked="checked" required="required"/>
+                        <label class="checkbox__label" for="agree">согласен с <a class="checkbox__link" href="/assets/files/documents/policy.pdf" target="_blank">политикой конфиденциальности</a></label>
+                      </div>
+                    </form>
+                  </div>
+                </div>
               </div>
-              <div class="item item_padding">
-                <p class="item__title text-bold text-uppercase">магазинам</p>
-                <p class="item__desc item__desc_full">Компания "Гранд фасад" открыта для сотрудничества с магазинами, торговыми домами и выставочными центрами. Мы предоставляем выгодные условия по реализации нашей продукции на Ваших торговых или выставочных площадях. Для&nbsp;получения подробной информации просим направить Ваш запрос на эл. почту.</p>
-              </div>
-              <div class="item item_padding">
-                <p class="item__title text-bold text-uppercase">магазинам</p>
-                <p class="item__desc item__desc_full">Компания "Гранд фасад" открыта для сотрудничества с магазинами, торговыми домами и выставочными центрами. Мы предоставляем выгодные условия по реализации нашей продукции на Ваших торговых или выставочных площадях. Для&nbsp;получения подробной информации просим направить Ваш запрос на эл. почту.</p>
-              </div>
-              <div class="item item_padding">
-                <p class="item__title text-bold text-uppercase">магазинам</p>
-                <p class="item__desc item__desc_full">Компания "Гранд фасад" открыта для сотрудничества с магазинами, торговыми домами и выставочными центрами. Мы предоставляем выгодные условия по реализации нашей продукции на Ваших торговых или выставочных площадях. Для&nbsp;получения подробной информации просим направить Ваш запрос на эл. почту.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="content content_seo">
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-8 col-lg-10">
+              <ul class="nav" id="myTab" role="tablist">
+                <li class="nav__item"><a class="nav__link active" id="description-tab" data-toggle="tab" href="#description" role="tab" aria-controls="description" aria-selected="true">Описание</a></li>
+                <li class="nav__item"><a class="nav__link" id="info-tab" data-toggle="tab" href="#info" role="tab" aria-controls="info" aria-selected="false">Характеристики</a></li>
+                <li class="nav__item"><a class="nav__link" id="delivery-tab" data-toggle="tab" href="#delivery" role="tab" aria-controls="delivery" aria-selected="false">Доставка и оплата</a></li>
+                <li class="nav__item"><a class="nav__link" id="build-tab" data-toggle="tab" href="#build" role="tab" aria-controls="build" aria-selected="false">Монтаж</a></li>
+              </ul>
+              <div class="tab-content tab-content_product" id="myTabContent">
+                <div class="tab-pane fade show active" id="description" role="tabpanel" aria-labelledby="description-tab">
+                  <p>Фактура камня сочетает в себе строгость, изящность, эффектность и монументальность. Природный камень придаст самое важное качество - красоту во всех исполнениях - будь это ландшафтный дизайн, наружная облицовка или стильный интерьер. </p>
+                  <p>Часто применяется при декорировании жилых домов и, набирающем популярность, эко-стиль интерьеров от городских квартир до загородных домов. Камень, толщиной 10-20 мм легко крепиться на горизонтальную и вертикальную поверхность. Натуральный камень шунгит можно комбинировать с любыми отделочными материалами и создавать стильные интерьеры и экстерьеры.</p>
+                  <p>Отделка натуральным камнем очень практична. Применять натуральный камень в интерьере квартиры можно весьма широко - это и расставление акцента в определенных зонах, каменные ступени, пороги и перила, арки, стены и колонны, сауны и бассейны. </p>
+                </div>
+                <div class="tab-pane fade" id="info" role="tabpanel" aria-labelledby="info-tab">
+                  <p>2</p>
+                </div>
+                <div class="tab-pane fade" id="delivery" role="tabpanel" aria-labelledby="delivery-tab">
+                  <p>3</p>
+                </div>
+                <div class="tab-pane fade" id="build" role="tabpanel" aria-labelledby="build-tab">
+                  <p>4</p>
+                </div>
               </div>
             </div>
           </div>
@@ -188,6 +159,9 @@
     </footer>
     <script src="./js/jquery.inputmask.js"></script>
     <script src="./js/slick.min.js"></script>
+    <script src="./js/util.js"></script>
+    <script src="./js/tab.js"></script>
+    <script src="./js/jquery.fancybox.min.js"></script>
     <script src="./js/app.min.js"></script>
   </body>
 </html>

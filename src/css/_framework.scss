@@ -75,3 +75,9 @@ small,
     &-1{letter-spacing: 1px;}
     &-2{letter-spacing: 2px;}
 }
+
+blockquote, .blockquote{
+    padding: 1.25rem;
+    border-left: 4px solid $blue;
+    color: lighten($color: $grey, $amount: 10%);
+}

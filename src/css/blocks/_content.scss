@@ -1,5 +1,6 @@
 .content{
     padding: 100px 0;
+
     .content__col{
         &_pl{
             padding-left: 40px;
@@ -25,14 +26,21 @@
     .row + .row{
         padding-top: 80px;
     }
-
+    // SEO
+    &_seo{
+        padding: 60px 0;
+        background: $light-bg;
+    }
     // Dark Border
+    &_border-top{
+        border-top: 1px solid darken($grey,10%);
+    }
     &_border-bottom{
         border-bottom: 1px solid darken($grey,10%);
     }
     // Dark Bg
     &_dark{
-        background: $grey;
+        background: $dark-bg;
         color: $white;
     }
     // Content + Content
@@ -65,7 +73,7 @@
         }
 
         &.advantage{
-            padding-bottom: 70px;
+            // padding-bottom: 70px;
 
             .advantage__title{
                 color: $light;

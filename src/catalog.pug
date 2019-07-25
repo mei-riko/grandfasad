@@ -6,7 +6,7 @@ html(lang="ru")
         main
             section.content.content_header.advantage(style="background-image: url('/img/demo-bg-2.jpg');")
                 .container
-                    .row
+                    .row.align-items-center
                         .col-xl-4
                             h1.h1.text-bold Каталог продукции
                             ul.breadcrumbs.breadcrumbs_light
@@ -14,27 +14,147 @@ html(lang="ru")
                                     a.breadcrumbs__link(href="#") Главная
                                 li.sep /
                                 li.breadcrumbs__item Каталог
-                            p Подходит для фасада и интерьера. Панели из камня универсальны и смогут подчеркнуть оригинальный интерьер или стать гармоничным дополнением фасада. 
+                            p.last Подходит для фасада и интерьера. Панели из камня универсальны и смогут подчеркнуть оригинальный интерьер или стать гармоничным дополнением фасада. 
                         .col-xl-8
                             .row
-                                .col-xl-3.advantage__item
+                                .col-xl-4.advantage__item
                                     p.advantage__number 001
-                                    p.advantage__title Быстрый монтаж
+                                    p.advantage__title.small Эксклюзивный дизайн
                                 .col-xl-4.advantage__item
                                     p.advantage__number 002
-                                    p.advantage__title Эксклюзивный дизайн
-                                .col-xl-5.advantage__item
+                                    p.advantage__title.small Быстрый монтаж
+                                .col-xl-4.advantage__item
                                     p.advantage__number 003
-                                    p.advantage__title Экономия до 14.000 с м2
-                                .col-xl-3.advantage__item
+                                    p.advantage__title.small Экономия до 14.000 с м2
+                                .col-xl-4.advantage__item.mb-0
                                     p.advantage__number 004
-                                    p.advantage__title Экологичность
-                                .col-xl-4.advantage__item 
+                                    p.advantage__title.small Визуальная эстетика
+                                .col-xl-4.advantage__item.mb-0
                                     p.advantage__number 005
-                                    p.advantage__title Визуальная эстетика
-                                .col-xl-5.advantage__item
+                                    p.advantage__title.small Экологичность
+                                .col-xl-4.advantage__item.mb-0
                                     p.advantage__number 006
-                                    p.advantage__title Срок службы более 100 лет
+                                    p.advantage__title.small Срок службы более 100 лет
+            section.content.catalog
+                .container
+                    .row.justify-content-center
+                        .col-xl-3.text-center
+                            .product
+                                .product__image
+                                    .product__image__style(style="background-image: url('/img/product-style-1.jpg');")
+                                    .product__image__default(style="background-image: url('/img/product-1.jpg');")
+                                .product__info
+                                    span.product__type Панель
+                                    span.sep —
+                                    span.product_article АРТ. 001
+                                .product__name Сланец изумрудный
+                                .product__price 2 550 руб
+                                    span.product__tooltip
+                                        span.product__tooltip--show ?
+                                        span.product__tooltip--hover за кв. м.
+                                ul.product__desc
+                                    li Размер: 150*600*15 мм
+                                    li Количество: 7 шт
+                                    li Вес упаковки:  21 кг
+                                a.btn.btn_dark(href="/product.html") Подробнее
+                        .col-xl-3.text-center
+                            .product
+                                .product__image
+                                    .product__image__style(style="background-image: url('/img/product-style-1.jpg');")
+                                    .product__image__default(style="background-image: url('/img/product-2.jpg');")
+                                .product__info
+                                    span.product__type Панель
+                                    span.sep —
+                                    span.product_article АРТ. 001
+                                .product__name Сланец изумрудный
+                                .product__price 2 550 руб
+                                    span.product__tooltip
+                                        span.product__tooltip--show ?
+                                        span.product__tooltip--hover за кв. м.
+                                ul.product__desc
+                                    li Размер: 150*600*15 мм
+                                    li Количество: 7 шт
+                                    li Вес упаковки:  21 кг
+                                a.btn.btn_dark(href="/product.html") Подробнее
+                        .col-xl-3.text-center
+                            .product
+                                .product__image
+                                    .product__image__style(style="background-image: url('/img/product-style-1.jpg');")
+                                    .product__image__default(style="background-image: url('/img/product-3.jpg');")
+                                .product__info
+                                    span.product__type Панель
+                                    span.sep —
+                                    span.product_article АРТ. 003
+                                .product__name Песчаник серо-зеленый со сколом
+                                .product__price 2 550 руб
+                                    span.product__tooltip
+                                        span.product__tooltip--show ?
+                                        span.product__tooltip--hover за кв. м.
+                                ul.product__desc
+                                    li Размер: 150*600*15 мм
+                                    li Количество: 7 шт
+                                    li Вес упаковки:  21 кг
+                                a.btn.btn_dark(href="/product.html") Подробнее
+                        .col-xl-3.text-center
+                            .product
+                                .product__image
+                                    .product__image__style(style="background-image: url('/img/product-style-1.jpg');")
+                                    .product__image__default(style="background-image: url('/img/product-4.jpg');")
+                                .product__info
+                                    span.product__type Панель
+                                    span.sep —
+                                    span.product_article АРТ. 001
+                                .product__name Сланец изумрудный
+                                .product__price 2 550 руб
+                                    span.product__tooltip
+                                        span.product__tooltip--show ?
+                                        span.product__tooltip--hover за кв. м.
+                                ul.product__desc
+                                    li Размер: 150*600*15 мм
+                                    li Количество: 7 шт
+                                    li Вес упаковки:  21 кг
+                                a.btn.btn_dark(href="/product.html") Подробнее
+                        .col-xl-3.text-center
+                            .product
+                                .product__image
+                                    .product__image__style(style="background-image: url('/img/product-style-1.jpg');")
+                                    .product__image__default(style="background-image: url('/img/product-3.jpg');")
+                                .product__info
+                                    span.product__type Панель
+                                    span.sep —
+                                    span.product_article АРТ. 003
+                                .product__name Песчаник серо-зеленый со сколом
+                                .product__price 2 550 руб
+                                    span.product__tooltip
+                                        span.product__tooltip--show ?
+                                        span.product__tooltip--hover за кв. м.
+                                ul.product__desc
+                                    li Размер: 150*600*15 мм
+                                    li Количество: 7 шт
+                                    li Вес упаковки:  21 кг
+                                a.btn.btn_dark(href="/product.html") Подробнее
+                        .col-xl-3.text-center
+                            .product
+                                .product__image
+                                    .product__image__style(style="background-image: url('/img/product-style-1.jpg');")
+                                    .product__image__default(style="background-image: url('/img/product-4.jpg');")
+                                .product__info
+                                    span.product__type Панель
+                                    span.sep —
+                                    span.product_article АРТ. 001
+                                .product__name Сланец изумрудный
+                                .product__price 2 550 руб
+                                    span.product__tooltip
+                                        span.product__tooltip--show ?
+                                        span.product__tooltip--hover за кв. м.
+                                ul.product__desc
+                                    li Размер: 150*600*15 мм
+                                    li Количество: 7 шт
+                                    li Вес упаковки:  21 кг
+                                a.btn.btn_dark(href="/product.html") Подробнее
+                    .row
+                        .col-xl-12.text-center
+                            a.btn.btn_border(href="#") Больше панелей
         include chunks/footer.pug
         
         script(src="./js/jquery.inputmask.js")

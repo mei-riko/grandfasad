@@ -29,7 +29,11 @@
                 transform: translateX(-10px) translateY(-10px);
             }
         }
+        &_full{
+            width: 100%;
+        }
     }
+
     .form__agree{
         margin-top: 1rem;
         font-size: 12px;
@@ -57,6 +61,7 @@
         .form__agree{
             flex: 0 0 100%;
             max-width: 100%;
+            padding: 0 5px;
         }
     }
     // Block Form
@@ -109,8 +114,6 @@
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
-    padding: 0 5px;
-
     &__input{
         display: none;
 
