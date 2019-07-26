@@ -12,7 +12,7 @@
     .navbar__link{
         font-size: 12px;
         text-transform: uppercase;
-        letter-spacing: 1px;
+        letter-spacing: 0;
         &:hover{
             text-decoration: none;
             color: $blue;
@@ -23,7 +23,7 @@
     }
 }
 .navbar-toggler{
-    display: none;
+    display: inline-block;
 }
 // Special For Navbar
 .index .header .navbar,
@@ -74,8 +74,11 @@
     margin-left: -20px;
     margin-right: -20px;
 
+    overflow-x: auto;
+    max-width: 100%;
+
     .nav__item{
-        padding: 0 20px;
+        padding: 0 10px;
     }
     .nav__link{
         position: relative;
@@ -84,8 +87,10 @@
         letter-spacing: 1px;
         font-weight: 700;
 
-        padding-bottom: 40px;
-        margin-bottom: 40px;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+
+        white-space: nowrap;
 
         &.active:after{
             content: '';
@@ -106,32 +111,28 @@
         }
     }
 }
-@media all and (max-width: map-get($grid-breakpoints, 'xl')){
+@media all and (min-width: map-get($grid-breakpoints, 'md')){
+    .nav{
+        .nav__item{
+            padding: 0 20px;
+        }
+    }
+}
+@media all and (min-width: map-get($grid-breakpoints, 'lg')){
+    .navbar-toggler{
+        display: none;
+    }
+    .nav{
+        .nav__link{
+            padding-bottom: 40px;
+            margin-bottom: 40px;
+        }
+    }
+}
+@media all and (min-width: map-get($grid-breakpoints, 'xl')){
     .navbar{
         .navbar__link{
-            letter-spacing: 0;
-        }
-    }
-}
-@media all and (max-width: map-get($grid-breakpoints, 'lg')){
-    .navbar-toggler{
-        display: inline-block;
-    }
-}
-@media all and (max-width: map-get($grid-breakpoints, 'md')){
-    .footer .navbar{
-        justify-content: flex-end;
-        .navbar__item{
-            margin-bottom: 10px;
-        }
-    }
-}
-@media all and (max-width: map-get($grid-breakpoints, 'sm')){
-    .footer .navbar{
-        justify-content: center;
-        .navbar__item{
-            margin-top: 10px;
-            margin-bottom: 0;
+            letter-spacing: 1px;
         }
     }
 }

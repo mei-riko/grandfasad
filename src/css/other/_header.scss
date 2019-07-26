@@ -1,15 +1,22 @@
 .header{
-    padding: 30px 0;
+    position: fixed;
+    width: 100%;
+    z-index: 101;
+
+    background: $white;
+    padding: 10px 0;
+
     .header__logo{
         width: 270px;
         height: 40px;
-        max-width: 100%;
-
+        max-width: calc( 100% - 40px );
         background: url("/img/logo.png") no-repeat left center / contain;
     }
     .header__phone{
         font-weight: 700;
-        letter-spacing: 2px;
+        letter-spacing: 0;
+        margin-left: -20px;
+
         &:hover{
             color: $blue;
             text-decoration: none;
@@ -38,45 +45,40 @@
     }
 }
 
-@media all and (max-width: map-get($grid-breakpoints, 'xl')){
-    .header{
-        .header__phone{
-            letter-spacing: 0;
-        }
-    }
+main{
+    padding-top: 60px;
 }
-@media all and (max-width: map-get($grid-breakpoints, 'lg')){
-    .d-lg-hidden{
-        display: none;
-    }
+
+@media all and (min-width: map-get($grid-breakpoints, 'sm')){
     .header{
-        position: fixed;
-        width: 100%;
-        z-index: 101;
-
-        background: $white;
         padding: 20px 0;
-
-        .header__logo{
-            max-width: calc( 100% - 40px );
+        .header__phone{
+            margin-left: 0px;
         }
     }
     main{
         padding-top: 80px;
     }
 }
-@media all and (max-width: map-get($grid-breakpoints, 'sm')){    
+@media all and (min-width: map-get($grid-breakpoints, 'lg')){
     .header{
-        padding: 10px 0;
-        .header__phone{
-            margin-left: -20px;
-        }
-        .header__call {
-            // font-size: 10px;
-            // margin-top: 10px;
+        position: initial;
+        width: auto;
+        padding: 30px 0;
+    
+        background: inherit;
+        .header__logo{
+            max-width: 100%;
         }
     }
     main{
-        padding-top: 60px;
+        padding-top: 0px;
+    }
+}
+@media all and (min-width: map-get($grid-breakpoints, 'xl')){
+    .header{
+        .header__phone{
+            letter-spacing: 2px;
+        }
     }
 }

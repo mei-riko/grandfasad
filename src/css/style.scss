@@ -35,5 +35,13 @@
     &_callSmall{
         width: 440px;
         max-width: 100%;
+        padding: 40px 20px;
     }
+}
+@media all and (min-width: map-get($grid-breakpoints, 'sm')){
+    .modal{
+        &_callSmall{
+            padding: 40px;
+        }
+    }    
 }

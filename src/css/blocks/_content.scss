@@ -1,5 +1,5 @@
 .content{
-    padding: 100px 0;
+    padding: 40px 0;
 
     .content__col{
         &_pl{
@@ -28,7 +28,7 @@
     }
     // SEO
     &_seo{
-        padding: 60px 0;
+        padding: 40px 0;
         background: $light-bg;
     }
     // Dark Border
@@ -86,10 +86,11 @@
     }
 }
 
-@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+@media all and (min-width: map-get($grid-breakpoints, 'md')){
     .content{
+        padding: 100px 0;
         &_seo{
-            padding: 40px 0;
+            padding: 60px 0;
         }
     }
 }
