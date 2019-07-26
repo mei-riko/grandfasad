@@ -7,6 +7,7 @@
     <title>Basic Page</title>
     <link href="./css/slick.css" rel="stylesheet"/>
     <link href="./css/slick-theme.css" rel="stylesheet"/>
+    <link href="./css/jquery.fancybox.min.css" rel="stylesheet"/>
     <link href="./css/style.css" rel="stylesheet"/>
     <script async="async" defer="defer" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBkS1YFi2KvkMaaudj8A56Ova53LzyEsr4"></script>
   </head>
@@ -15,8 +16,16 @@
     <header class="header">
       <div class="container">
         <div class="row align-items-center">
-          <div class="col-xl-3"><a class="header__logo" href="/"></a></div>
-          <div class="col-xl-6">
+          <div class="col-xl-3 col-lg-2 col-sm-6 col-7 d-flex align-items-center justify-content-between">
+            <div class="navbar-toggler">
+              <svg class="header__navbar-icon" width="24px" height="24px" viewBox="0 0 512 512">
+                <path class="path" d="M491.318,235.318H20.682C9.26,235.318,0,244.577,0,256s9.26,20.682,20.682,20.682h470.636 c11.423,0,20.682-9.259,20.682-20.682C512,244.578,502.741,235.318,491.318,235.318z"></path>
+                <path class="path" d="M491.318,78.439H20.682C9.26,78.439,0,87.699,0,99.121c0,11.422,9.26,20.682,20.682,20.682h470.636c11.423,0,20.682-9.26,20.682-20.682C512,87.699,502.741,78.439,491.318,78.439z"></path>
+                <path class="path" d="M491.318,392.197H20.682C9.26,392.197,0,401.456,0,412.879s9.26,20.682,20.682,20.682h470.636c11.423,0,20.682-9.259,20.682-20.682S502.741,392.197,491.318,392.197z"></path>
+              </svg>
+            </div><a class="header__logo" href="/"></a>
+          </div>
+          <div class="col-xl-6 col-lg-8 d-lg-hidden">
             <nav class="navbar navbar_inline">
               <div class="navbar__item"><a class="navbar__link navbar__link--active" href="/">Главная</a></div>
               <div class="navbar__item"><a class="navbar__link" href="/catalog.html">Каталог продукции</a></div>
@@ -25,7 +34,7 @@
               <div class="navbar__item"><a class="navbar__link" href="/contact.html">Контакты</a></div>
             </nav>
           </div>
-          <div class="col-xl-3 text-right">
+          <div class="col-xl-3 col-lg-2 col-sm-6 col-5 text-right">
             <div class="header__link"><a class="header__phone" href="tel:89516878063">8 (951) 687-80-63</a></div>
             <div class="header__link"><a class="header__call" id="callModal" href="#">Заказать звонок</a></div>
           </div>
@@ -76,8 +85,8 @@
     <footer class="footer">
       <div class="container">
         <div class="row footer__row align-items-center">
-          <div class="col-lg-3"> <a class="footer__logo" href="/"></a></div>
-          <div class="col-lg-6">
+          <div class="col-lg-3 col-sm-5 col-md-4"><a class="footer__logo" href="/"></a></div>
+          <div class="col-lg-6 col-sm-7 col-md-4">
             <nav class="navbar">
               <div class="navbar__item"><a class="navbar__link" href="/catalog.html">Каталог продукции</a></div>
               <div class="navbar__item"><a class="navbar__link" href="/about.html">О компании</a></div>
@@ -85,7 +94,7 @@
               <div class="navbar__item"><a class="navbar__link" href="/contact.html">Контакты</a></div>
             </nav>
           </div>
-          <div class="col-lg-3">
+          <div class="col-lg-3 col-sm-12 col-md-4">
             <ul class="footer__contact">
               <li class="footer__item">Санкт-Петербург</li>
               <li class="footer__item"><a class="footer__link" href="tel:8 (951) 687-80-63">8 (951) 687-80-63</a></li>
@@ -96,13 +105,13 @@
       <div class="footer__info">
         <div class="container">
           <div class="row">
-            <div class="col-md-4">
+            <div class="col-sm-4 text-sm-center">
               <p><a class="footer__link" href="#">Политика конфиденциальности</a></p>
             </div>
-            <div class="col-md-4 text-center">
+            <div class="col-sm-4 text-center">
               <p>© 2019. Все права защищены</p>
             </div>
-            <div class="col-md-4 text-right">
+            <div class="col-sm-4 text-right text-sm-center">
               <p>Сайт разработан в <a class="footer__link" href="#">«SOHO»</a></p>
             </div>
           </div>

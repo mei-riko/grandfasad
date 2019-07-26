@@ -25,6 +25,7 @@
 
         display: flex;
         justify-content: flex-end;
+        flex-wrap: wrap;
 
         @extend .small;
         text-transform: uppercase;
@@ -54,6 +55,25 @@
             &:hover{
                 color: $light;
             }
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
+    .footer{
+        .footer__row {
+            padding: 20px 0;
+        }
+        .footer__contact{
+            justify-content: center;
+            margin-top: 20px;
+        }
+    }    
+}
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .footer{
+        .footer__logo{
+            margin: 0 auto 20px;
+            display: block;
         }
     }
 }

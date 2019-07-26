@@ -37,3 +37,46 @@
         }
     }
 }
+
+@media all and (max-width: map-get($grid-breakpoints, 'xl')){
+    .header{
+        .header__phone{
+            letter-spacing: 0;
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'lg')){
+    .d-lg-hidden{
+        display: none;
+    }
+    .header{
+        position: fixed;
+        width: 100%;
+        z-index: 101;
+
+        background: $white;
+        padding: 20px 0;
+
+        .header__logo{
+            max-width: calc( 100% - 40px );
+        }
+    }
+    main{
+        padding-top: 80px;
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){    
+    .header{
+        padding: 10px 0;
+        .header__phone{
+            margin-left: -20px;
+        }
+        .header__call {
+            // font-size: 10px;
+            // margin-top: 10px;
+        }
+    }
+    main{
+        padding-top: 60px;
+    }
+}

@@ -86,16 +86,10 @@
     }
 }
 
-.index{
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
     .content{
-        &.advantage{
-            .content__title{
-                &_fixed{
-                    position: fixed;
-                    top: 230px;
-                    max-width: calc(25% - 40px);
-                }
-            }
+        &_seo{
+            padding: 40px 0;
         }
     }
 }
