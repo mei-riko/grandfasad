@@ -4,18 +4,19 @@
     z-index: 101;
 
     background: $white;
-    padding: 10px 0;
+    padding: 0;
+    border-bottom: 1px solid $light-grey;
 
     .header__logo{
         width: 270px;
-        height: 40px;
-        max-width: calc( 100% - 40px );
+        height: 30px;
+        max-width: calc( 100% - 84px );
         background: url("/img/logo.png") no-repeat left center / contain;
     }
     .header__phone{
         font-weight: 700;
         letter-spacing: 0;
-        margin-left: -20px;
+        // margin-left: -20px;
 
         &:hover{
             color: $blue;
@@ -30,34 +31,48 @@
             color: $grey;
         }
     }
-}
+    // For Mobile Col
+    .header__mobile{
+        padding: 0;
+        .header__phone{
+            position: relative;
+            width: 64px;
+            height: 64px;
+            &:before{
+                width: 100%;
+                height: 100%;
 
-.index, .company{
-    .header{
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        padding: 60px 0;
-        .header__logo{
-            margin-bottom: 40px;
+                background: $grey url("/img/icon/mobile-phone.svg") no-repeat center / 28px;
+                color: $grey;
+
+                content: '';
+                display: block;
+
+                position: absolute;
+                left: 0;
+                top: 0;
+
+                transition: .3s;
+            }
+
+            &:hover{
+                &:before{
+                    background: darken($grey,10%) url("/img/icon/mobile-phone.svg") no-repeat center / 28px;
+                }
+            }
         }
     }
 }
 
 main{
-    padding-top: 60px;
+    padding-top: 65px;
 }
 
 @media all and (min-width: map-get($grid-breakpoints, 'sm')){
     .header{
-        padding: 20px 0;
-        .header__phone{
-            margin-left: 0px;
+        .container{
+            max-width: 100%;
         }
-    }
-    main{
-        padding-top: 80px;
     }
 }
 @media all and (min-width: map-get($grid-breakpoints, 'lg')){
@@ -67,18 +82,53 @@ main{
         padding: 30px 0;
     
         background: inherit;
+        border: none;
+
         .header__logo{
             max-width: 100%;
+            height: 36px;
+        }
+        .header__mobile{
+            padding: 0 20px;
+            .header__phone{
+                width: 100%;
+                height: auto;
+                &:before{
+                    display: none;
+                }
+            }
+        }
+        .container{
+            max-width: 960px;
         }
     }
     main{
         padding-top: 0px;
     }
+    .index, .company{
+        .header{
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+
+            width: 100%;
+            
+            padding: 60px 0;
+            .header__logo{
+                margin-bottom: 40px;
+            }
+        }
+    }
 }
 @media all and (min-width: map-get($grid-breakpoints, 'xl')){
     .header{
         .header__phone{
+            font-size: 16px;
             letter-spacing: 2px;
+        }
+        .container{
+            max-width: 1400px;
         }
     }
 }

@@ -19,7 +19,7 @@ h1, h2, h3, h4, h5, h6,
     margin-top: 2.5rem;
 }
 h1, .h1{font-size: 2rem;}
-h2, .h2{font-size: 2rem;}
+h2, .h2{font-size: 1.75rem;}
 h3, .h3{font-size: 1.75rem;}
 h4, .h4{font-size: 1.5rem;}
 h5, .h5{font-size: 1.25rem;}
@@ -86,9 +86,8 @@ blockquote, .blockquote{
     display: none;
 }
 
-.mt-40{
-    margin-top: 40px;
-}
+.mt-20{margin-top: 20px;}
+.mt-40{margin-top: 40px;}
 
 @media all and (min-width: map-get($grid-breakpoints, 'sm')){
     html,body {
@@ -102,6 +101,9 @@ blockquote, .blockquote{
     .text-sm-center{text-align: center;}
     .text-sm-left{text-align: left;}
 
+    .mb-sm-0{
+        margin-bottom: 0;
+    }
     .mt-sm-0{
         margin-top: 0;
     }
@@ -111,6 +113,9 @@ blockquote, .blockquote{
     .text-md-right{text-align: right;}
     .text-md-center{text-align: center;}
     .text-md-left{text-align: left;}
+    .mb-md-0{
+        margin-bottom: 0;
+    }
     .mt-md-0{
         margin-top: 0;
     }
@@ -119,11 +124,22 @@ blockquote, .blockquote{
     .d-lg-hidden{
         display: block;
     }
+    .text-lg-right{text-align: right;}
+    .text-lg-center{text-align: center;}
+    .text-lg-left{text-align: left;}
+    .mb-lg-0{
+        margin-bottom: 0;
+    }
     .mt-lg-0{
         margin-top: 0;
     }
 }
 @media all and (min-width: map-get($grid-breakpoints, 'xl')){
+    h2, .h2{font-size: 1.75rem;}
+
+    .mb-xl-0{
+        margin-bottom: 0;
+    }
     .mt-xl-0{
         margin-top: 0;
     }

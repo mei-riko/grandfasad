@@ -7,6 +7,7 @@
     <title>Basic Page</title>
     <link href="./css/slick.css" rel="stylesheet"/>
     <link href="./css/slick-theme.css" rel="stylesheet"/>
+    <link href="./css/jquery.fancybox.min.css" rel="stylesheet"/>
     <link href="./css/style.css" rel="stylesheet"/>
     <script async="async" defer="defer" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBkS1YFi2KvkMaaudj8A56Ova53LzyEsr4"></script>
   </head>
@@ -15,61 +16,75 @@
     <header class="header">
       <div class="container">
         <div class="row">
-          <div class="col-xl-3 header__col">
-            <div class="header__logo"></div>
-            <div class="header__link"><a class="header__phone" href="tel:89516878063">8 (951) 687-80-63</a></div>
-            <div class="header__link"><a class="header__call" id="callModal" href="#">Заказать звонок</a></div>
-            <nav class="navbar">
-              <div class="navbar__item"><a class="navbar__link navbar__link--active" href="/">Главная</a></div>
-              <div class="navbar__item"><a class="navbar__link" href="/catalog.html">Каталог продукции</a></div>
-              <div class="navbar__item"><a class="navbar__link" href="/about.html">О компании</a></div>
-              <div class="navbar__item"><a class="navbar__link" href="/page.html">Доставка и оплата</a></div>
-              <div class="navbar__item"><a class="navbar__link" href="/contact.html">Контакты</a></div>
-            </nav>
+          <div class="col-lg-3 col-xl-3 header__col">
+            <div class="row align-items-center">
+              <div class="header__mobile col-9 col-lg-12 d-flex align-items-center justify-content-between">
+                <div class="navbar-toggler">
+                  <svg class="header__navbar-icon" width="24px" height="24px" viewBox="0 0 512 512">
+                    <path class="path" d="M491.318,235.318H20.682C9.26,235.318,0,244.577,0,256s9.26,20.682,20.682,20.682h470.636 c11.423,0,20.682-9.259,20.682-20.682C512,244.578,502.741,235.318,491.318,235.318z"></path>
+                    <path class="path" d="M491.318,78.439H20.682C9.26,78.439,0,87.699,0,99.121c0,11.422,9.26,20.682,20.682,20.682h470.636c11.423,0,20.682-9.26,20.682-20.682C512,87.699,502.741,78.439,491.318,78.439z"></path>
+                    <path class="path" d="M491.318,392.197H20.682C9.26,392.197,0,401.456,0,412.879s9.26,20.682,20.682,20.682h470.636c11.423,0,20.682-9.259,20.682-20.682S502.741,392.197,491.318,392.197z"></path>
+                  </svg>
+                </div><a class="header__logo" href="/"></a>
+              </div>
+              <div class="header__mobile col-3 col-lg-12 text-right text-lg-left">             
+                <div class="header__link"><a class="header__phone" href="tel:89516878063">8 (951) 687-80-63</a></div>
+                <div class="header__link d-lg-hidden"><a class="header__call" id="callModal" href="#">Заказать звонок</a></div>
+              </div>
+              <div class="col-12 col-lg-12">
+                <nav class="navbar d-lg-hidden">
+                  <div class="navbar__item"><a class="navbar__link navbar__link--active" href="/">Главная</a></div>
+                  <div class="navbar__item"><a class="navbar__link" href="/catalog.html">Каталог продукции</a></div>
+                  <div class="navbar__item"><a class="navbar__link" href="/about.html">О компании</a></div>
+                  <div class="navbar__item"><a class="navbar__link" href="/page.html">Доставка и оплата</a></div>
+                  <div class="navbar__item"><a class="navbar__link" href="/contact.html">Контакты</a></div>
+                </nav>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </header>
     <main>
       <section class="slider slider_index">
+        <div class="slider__image">
+          <div class="slider__item" style="background-image: url('/img/demo-bg-1.jpg');"></div>
+          <div class="slider__item" style="background-image: url('/img/demo-bg-2.jpg');"></div>
+        </div>
         <div class="slider__content slider__content_fixed">
           <h1 class="slider__title">Панели из&nbsp;натурального камня для&nbsp;интерьера и&nbsp;внешней отделки</h1>
           <p class="slider__intro">
             Неповторимый каменный узор складывается в&nbsp;причудливый орнамент, который обязательно станет гармоничным дополнением оформления вашего дома.</p><a class="btn btn_dark" href="/caralog.html">В каталог</a>
         </div>
-        <div class="slider__image">
-          <div class="slider__item" style="background-image: url('/img/demo-bg-1.jpg');"></div>
-          <div class="slider__item" style="background-image: url('/img/demo-bg-2.jpg');"></div>
-        </div>
       </section>
       <section class="content advantage">
         <div class="container">
           <div class="row">
-            <div class="col-xl-3">
+            <div class="col-xl-3 col-lg-3">
               <p class="content__title">Преимущества панелей из&nbsp;камня</p>
             </div>
-            <div class="col-xl-8">
+            <div class="col-xl-8 col-lg-9">
               <p class="content__intro">Материал полностью экологичный и гипоаллергенный, идеально подходит для отделки как фасадов домов и зданий, так и для декора интерьера. Панели из камня морозостойкие, не восприимчивы к влаге и другим даже самым агрессивным внешним воздействиям, что обеспечивает вечный срок службы.</p>
               <div class="row">
-                <div class="col-xl-6 advantage__item">
+                <div class="col-6 col-xl-6 advantage__item">
                   <p class="advantage__number">001</p>
                   <p class="advantage__title">Вечный материал</p>
                   <p class="advantage__content last">
                     Камень не изнашивается и&nbsp;не&nbsp;стирается, в&nbsp;отличие от&nbsp;других покрытий</p>
                 </div>
-                <div class="col-xl-6 advantage__item">
+                <div class="col-6 col-xl-6 advantage__item">
                   <p class="advantage__number">002</p>
                   <p class="advantage__title">Простой монтаж</p>
                   <p class="advantage__content last">
                     Укладка панелей не&nbsp;требует специальных навыков и&nbsp;материалов</p>
                 </div>
-                <div class="col-xl-6 advantage__item mb-0">
+                <div class="col-6 col-xl-6 advantage__item mb-xl-0">
                   <p class="advantage__number">003</p>
                   <p class="advantage__title">Универсальность </p>
                   <p class="advantage__content last">
                     Панели из&nbsp;камня идеально подходят для&nbsp;интерьера и&nbsp;фасада</p>
                 </div>
-                <div class="col-xl-6 advantage__item mb-0">
+                <div class="col-6 col-xl-6 advantage__item mb-0">
                   <p class="advantage__number">004</p>
                   <p class="advantage__title">Уникальный дизайн</p>
                   <p class="advantage__content last">Каждый рисунок панели - неповторимое сочетание каменных узоров и&nbsp;цветов </p>
@@ -82,9 +97,9 @@
       <section class="content content_pt-none">
         <div class="container">
           <div class="row align-items-center">
-            <div class="col-xl-7"><img class="img-fluid" src="/img/products-type-01.png"/></div>
-            <div class="col-xl-5">
-              <div class="content__col_pl">
+            <div class="col-xl-7 col-lg-6"><img class="img-fluid" src="/img/products-type-01.png"/></div>
+            <div class="col-xl-5 col-lg-6">
+              <div class="content__col content__col_pl">
                 <h2>Панели из камня <span class="text-bold">для фасада</span></h2>
                 <p class="item__desc small">
                   Хотите выделить фасад своего дома среди других построек? Закажите отделку экстерьера натуральным камнем и станьте обладателем неповторимого дома! </p>
@@ -96,9 +111,9 @@
               </div>
             </div>
           </div>
-          <div class="row align-items-center">
-            <div class="col-xl-5">
-              <div class="content__col_pr">
+          <div class="row align-items-center flex-column-reverse flex-lg-row">
+            <div class="col-xl-5 col-lg-6">
+              <div class="content__col content__col_pr">
                 <h2>Панели из камня <span class="text-bold">для интерьера</span></h2>
                 <p class="item__desc small">
                   Сделайте свой интерьер роскошным и элегантным при помощи панелей из&nbsp;натурального камня. Выбирая этот природный материал 
@@ -109,7 +124,7 @@
                   Материал не&nbsp;покрывается мхом и&nbsp;плесенью, не деформируется и&nbsp;сохраняет свой внешний вид даже в самых экстремальных условиях. </p>
               </div>
             </div>
-            <div class="col-xl-7"><img class="img-fluid" src="/img/products-type-02.png"/></div>
+            <div class="col-xl-7 col-lg-6"><img class="img-fluid" src="/img/products-type-02.png"/></div>
           </div>
         </div>
       </section>
@@ -117,42 +132,42 @@
         <div class="container">
           <p class="content__title catalog__title">Хиты продаж</p>
           <div class="row">
-            <div class="col-xl-6"><a class="product" href="/product.html">
+            <div class="col-md-6 col-lg-4 col-xl-6"><a class="product" href="/product.html">
                 <div class="product__image">
                   <div class="product__image__style" style="background-image: url('/img/product-style-1.jpg');"></div>
                   <div class="product__image__default" style="background-image: url('/img/product-1.jpg');"></div>
                 </div>
                 <div class="product__info"><span class="product__type">Панель</span><span class="sep">—</span><span class="product_article">АРТ. 001</span></div>
                 <div class="product__name">Сланец изумрудный </div></a></div>
-            <div class="col-xl-3"><a class="product" href="/product.html">
+            <div class="col-md-6 col-lg-4 col-xl-3"><a class="product" href="/product.html">
                 <div class="product__image">
                   <div class="product__image__style" style="background-image: url('/img/product-style-1.jpg');"></div>
                   <div class="product__image__default" style="background-image: url('/img/product-2.jpg');"></div>
                 </div>
                 <div class="product__info"><span class="product__type">Панель</span><span class="sep">—</span><span class="product_article">АРТ. 002</span></div>
                 <div class="product__name">Шунгит </div></a></div>
-            <div class="col-xl-3"><a class="product" href="/product.html">
+            <div class="col-md-6 col-lg-4 col-xl-3"><a class="product" href="/product.html">
                 <div class="product__image">
                   <div class="product__image__style" style="background-image: url('/img/product-style-1.jpg');"></div>
                   <div class="product__image__default" style="background-image: url('/img/product-3.jpg');"></div>
                 </div>
                 <div class="product__info"><span class="product__type">Панель</span><span class="sep">—</span><span class="product_article">АРТ. 003</span></div>
                 <div class="product__name">Песчаник тигровый</div></a></div>
-            <div class="col-xl-4"><a class="product" href="/product.html">
+            <div class="col-md-6 col-lg-4 col-xl-4"><a class="product" href="/product.html">
                 <div class="product__image">
                   <div class="product__image__style" style="background-image: url('/img/product-style-1.jpg');"></div>
                   <div class="product__image__default" style="background-image: url('/img/product-4.jpg');"></div>
                 </div>
                 <div class="product__info"><span class="product__type">Панель</span><span class="sep">—</span><span class="product_article">АРТ. 008</span></div>
                 <div class="product__name">Кварцит золотистый </div></a></div>
-            <div class="col-xl-4"><a class="product" href="/product.html">
+            <div class="col-md-6 col-lg-4 col-xl-4"><a class="product" href="/product.html">
                 <div class="product__image">
                   <div class="product__image__style" style="background-image: url('/img/product-style-1.jpg');"></div>
                   <div class="product__image__default" style="background-image: url('/img/product-5.jpg');"></div>
                 </div>
                 <div class="product__info"><span class="product__type">Панель</span><span class="sep">—</span><span class="product_article">АРТ. 009</span></div>
                 <div class="product__name">Златолит серо-зеленый </div></a></div>
-            <div class="col-xl-4"><a class="product" href="/product.html">
+            <div class="col-md-6 col-lg-4 col-xl-4"><a class="product" href="/product.html">
                 <div class="product__image">
                   <div class="product__image__style" style="background-image: url('/img/product-style-1.jpg');"></div>
                   <div class="product__image__default" style="background-image: url('/img/product-6.jpg');"></div>
@@ -164,20 +179,20 @@
       </section>
       <section class="content">
         <div class="container">
-          <p class="content__title content__title_full text-center">Как мы работаем? </p>
+          <p class="content__title content__title_full text-lg-center">Как мы работаем? </p>
           <div class="row justify-content-center align-items-center">
-            <div class="col-xl-3">
-              <div class="item text-right">
+            <div class="col-md-6 col-lg-4 col-xl-3">
+              <div class="item text-lg-right">
                 <p class="item__title text-bold text-uppercase">1. Заказ и осмотр</p>
                 <p class="item__desc small">Оставляете заявку на нужный материал перед посещением магазина или выставочного зала</p>
               </div>
-              <div class="item text-right">
+              <div class="item text-lg-right">
                 <p class="item__title text-bold text-uppercase">3. Изготовление</p>
                 <p class="item__desc small">В оговоренные сроки мы изготавливаем панели из камня</p>
               </div>
             </div>
-            <div class="col-xl-4"><img class="img-fluid item-image" src="/img/image-section.png" width="300"/></div>
-            <div class="col-xl-3">
+            <div class="col-lg-4 col-xl-4 d-md-none d-lg-block"><img class="img-fluid item-image" src="/img/image-section.png" width="300"/></div>
+            <div class="col-md-6 col-lg-4 col-xl-3">
               <div class="item">
                 <p class="item__title text-bold text-uppercase">2. Договор</p>
                 <p class="item__desc small">Мы заключаем договор и вы вносите предоплату в размере 50%</p>
@@ -189,7 +204,7 @@
             </div>
           </div>
           <div class="row justify-content-center">
-            <div class="col-xl-6">       
+            <div class="col-lg-8 col-xl-6"> 
               <p class="h1 text-center">Сделайте <span class="text-bold">первый шаг навстречу </span>эксклюзивному дизайну</p>
               <form class="form form_inline form_mt">
                 <div class="form__group">
@@ -212,7 +227,7 @@
         <div class="map__info">
           <div class="container">
             <div class="row">
-              <div class="col-xl-4">
+              <div class="col-lg-5 col-xl-4">
                 <div class="block">
                   <p class="block__title"> <span class="name">Телефон</span><a class="link" href="tel:8 (951) 687-80-63">8 (951) 687-80-63</a></p>
                   <p class="block__title"> <span class="name">E-mail</span><a class="link" href="mailto:info@grand-fasad.ru">info@grand-fasad.ru</a></p>
@@ -232,8 +247,8 @@
     <footer class="footer">
       <div class="container">
         <div class="row footer__row align-items-center">
-          <div class="col-lg-3"> <a class="footer__logo" href="/"></a></div>
-          <div class="col-lg-6">
+          <div class="col-xl-3 col-lg-3 col-md-4"><a class="footer__logo" href="/"></a></div>
+          <div class="col-xl-6 col-lg-7 col-md-4">
             <nav class="navbar">
               <div class="navbar__item"><a class="navbar__link" href="/catalog.html">Каталог продукции</a></div>
               <div class="navbar__item"><a class="navbar__link" href="/about.html">О компании</a></div>
@@ -241,7 +256,7 @@
               <div class="navbar__item"><a class="navbar__link" href="/contact.html">Контакты</a></div>
             </nav>
           </div>
-          <div class="col-lg-3">
+          <div class="col-xl-3 col-lg-2 col-sm-12 col-md-4">
             <ul class="footer__contact">
               <li class="footer__item">Санкт-Петербург</li>
               <li class="footer__item"><a class="footer__link" href="tel:8 (951) 687-80-63">8 (951) 687-80-63</a></li>
@@ -252,13 +267,13 @@
       <div class="footer__info">
         <div class="container">
           <div class="row">
-            <div class="col-md-4">
+            <div class="col-sm-4 text-center text-sm-left">
               <p><a class="footer__link" href="#">Политика конфиденциальности</a></p>
             </div>
-            <div class="col-md-4 text-center">
+            <div class="col-sm-4 text-center">
               <p>© 2019. Все права защищены</p>
             </div>
-            <div class="col-md-4 text-right">
+            <div class="col-sm-4 text-center text-sm-right">
               <p>Сайт разработан в <a class="footer__link" href="#">«SOHO»</a></p>
             </div>
           </div>

@@ -43,23 +43,21 @@ $(document).ready(() =>{
     asNavFor: '.slider_for .slider__image',
     dots: false,
     centerMode: false,
-    focusOnSelect: true
+    focusOnSelect: true,
+    infinite: false,
   });
 
-    // Navbar
-    // if( $("body").scrollTop() > 100 ){
-    //     $(".index .header .navbar").fadeOut();
-    // }
-
-    // $(window).scroll(function(){
-    //     var scroll=$(document).scrollTop();
-    //     if( scroll > 100 ){
-    //         $(".index .header .navbar").fadeOut();
-    //     }else{
-    //         $(".index .header .navbar").fadeIn();
-    //     }
-    // });
-
+  // Navbar
+  $(".header .navbar-toggler").on("click", function(){
+    $(".navbar.navbar_mobile").toggleClass("navbar_mobile--active");
+  });
+  $(document).mouseup(function (e){ // событие клика по веб-документу
+		var navbar = $(".navbar.navbar_mobile.navbar_mobile--active"); // тут указываем ID элемента
+		if (!navbar.is(e.target) && navbar.has(e.target).length === 0) {
+      navbar.removeClass("navbar_mobile--active");
+		}
+  });
+  
   // Maps
   if( $('#map').length > 0 ) {
     var coordinates = {lat: 59.92577096038783, lng: 30.347231626510624};

@@ -5,40 +5,40 @@ html(lang="ru")
         include chunks/header.pug
         main
             section.slider.slider_index
-                .slider__content.slider__content_fixed
-                    h1.slider__title.text-bold О компании «ГрандФасад»
-                    p.slider__intro Компания занимается производством и реализацией модульных панелей из натурального камня.  Используем в работе российское сырье - сланец, песчаник, кварцит. 
-                    p.slider__intro  Панели - это единый модуль, состоящий из склеенных между собой фрагментов камня. Каждый фрагмент имеет неровную поверхность, что позволяет придать изделию «объем» природного материала.  
                 .slider__image
                     .slider__item(style="background-image: url('/img/demo-bg-1.jpg');")
                     .slider__item(style="background-image: url('/img/demo-bg-2.jpg');")
+                .slider__content.slider__content_fixed
+                    h1.slider__title.text-bold О компании «ГрандФасад»
+                    p.slider__intro Компания занимается производством и реализацией модульных панелей из натурального камня.  Используем в работе российское сырье - сланец, песчаник, кварцит. 
+                    p.slider__intro.last Панели - это единый модуль, состоящий из склеенных между собой фрагментов камня. Каждый фрагмент имеет неровную поверхность, что позволяет придать изделию «объем» природного материала.  
             section.content.advantage
                 .container
                     .row
-                        .col-xl-3
+                        .col-xl-3.col-lg-3
                             p.content__title особенности панелей из&nbsp;натурального камня
-                        .col-xl-8
+                        .col-xl-8.col-lg-9.mt-40.mt-lg-0
                             .row
-                                .col-xl-6.advantage__item.advantage__item_icon.advantage__item_icon--eco
+                                .col-md-6.advantage__item.advantage__item_icon.advantage__item_icon--eco
                                     p.advantage__title Экологичные
                                     p.advantage__content.last Панели производятся из натурального отечественного сырья, 
                                         | а&nbsp;компания заботится об&nbsp;экологичности производства
-                                .col-xl-6.advantage__item.advantage__item_icon.advantage__item_icon--universal
+                                .col-md-6.advantage__item.advantage__item_icon.advantage__item_icon--universal
                                     p.advantage__title Уникальные
                                     p.advantage__content.last Панели из камня универсальны. Они подчеркивают оригинальный интерьер и гармонично дополняют фасад.
-                                .col-xl-6.advantage__item.advantage__item_icon.advantage__item_icon--allergy
+                                .col-md-6.advantage__item.advantage__item_icon.advantage__item_icon--allergy
                                     p.advantage__title Гипоаллергенные
                                     p.advantage__content.last Не покрывается мхом и плесенью. Камень устойчив к воздействиям влаги и к перепадам температур.
-                                .col-xl-6.advantage__item.advantage__item_icon.advantage__item_icon--time
+                                .col-md-6.advantage__item.advantage__item_icon.advantage__item_icon--time
                                     p.advantage__title долговечные
                                     p.advantage__content.last Срок эксплуатации - от 100 лет. Материал не деформируется, не выцветает и не разрушается при любых условиях.
-            section.content
+            section.content.content_pt-none
                 .container
                     .row.align-items-center
-                        .col-xl-7
+                        .col-xl-7.col-lg-6
                             img.img-fluid(src="/img/products-type-01.png")
-                        .col-xl-5
-                            .content__col_pl
+                        .col-xl-5.col-lg-6
+                            .content__col.content__col_pl
                                 p.h4 Вы всегда можете приехать к нам и лично  
                                     span.text-bold убедиться в качестве товара
                                 p.item__desc.last Приходите в офис и посмотрите на все образцы панелей из камня. Менеджер проконсультирует вас и поможет подобрать подходящий вариант.
@@ -47,16 +47,16 @@ html(lang="ru")
                     p.content__title.h1.text-center Виды панелей из камня
                     p.text-center(style="margin:0 auto 2.25rem;width:600px;max-width:100%;") Приходите в офис и посмотрите на все образцы панелей из камня. Менеджер проконсультирует вас и поможет подобрать подходящий вариант.
                     .row
-                        .col-xl-3
+                        .col-sm-6.col-lg-3
                             img.img-fluid(src="/img/product-1.jpg" style="height: 95px;")
-                        .col-xl-3
+                        .col-sm-6.col-lg-3.mt-20.mt-sm-0
                             img.img-fluid(src="/img/product-2.jpg" style="height: 95px;")
-                        .col-xl-3
+                        .col-sm-6.col-lg-3.mt-20.mt-lg-0
                             img.img-fluid(src="/img/product-3.jpg" style="height: 95px;")
-                        .col-xl-3
+                        .col-sm-6.col-lg-3.mt-20.mt-lg-0
                             img.img-fluid(src="/img/product-4.jpg" style="height: 95px;")
                     .row.justify-content-center
-                        .col-xl-7
+                        .col-xl-7.col-lg-9
                             p.h4.text-center Оставьте заявку перед визитом и мы 
                                 span.text-bold подготовим образцы
                             form.form.form_block.form_mt
@@ -78,9 +78,9 @@ html(lang="ru")
             section.content.content_dark.content_border-bottom
                 .container
                     .row
-                        .col-xl-3
+                        .col-xl-3.col-lg-3
                             p.content__title партнерская программа
-                        .col-xl-7
+                        .col-xl-7.col-lg-9
                             p.content__intro Материал полностью экологичный и гипоаллергенный, идеально подходит для отделки как фасадов домов и зданий, так и для декора интерьера. Панели из камня морозостойкие, не восприимчивы к влаге и другим даже самым агрессивным внешним воздействиям, что обеспечивает вечный срок службы.
                             .item.item_padding
                                 p.item__title.text-bold.text-uppercase магазинам

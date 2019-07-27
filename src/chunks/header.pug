@@ -1,21 +1,40 @@
 header.header
     .container
         .row
-            .col-xl-3.header__col
-                .header__logo
-                .header__link
-                    a.header__phone(href="tel:89516878063") 8 (951) 687-80-63
-                .header__link
-                    a.header__call#callModal(href="#") Заказать звонок
-
-                nav.navbar
-                    .navbar__item
-                        a.navbar__link.navbar__link--active(href="/") Главная
-                    .navbar__item
-                        a.navbar__link(href="/catalog.html") Каталог продукции
-                    .navbar__item
-                        a.navbar__link(href="/about.html") О компании
-                    .navbar__item
-                        a.navbar__link(href="/page.html") Доставка и оплата
-                    .navbar__item
-                        a.navbar__link(href="/contact.html") Контакты
+            .col-lg-3.col-xl-3.header__col
+                .row.align-items-center
+                    .header__mobile.col-9.col-lg-12.d-flex.align-items-center.justify-content-between
+                        .navbar-toggler
+                            svg.header__navbar-icon(width="24px" height="24px" viewBox="0 0 512 512")
+                                path.path(d="M491.318,235.318H20.682C9.26,235.318,0,244.577,0,256s9.26,20.682,20.682,20.682h470.636 c11.423,0,20.682-9.259,20.682-20.682C512,244.578,502.741,235.318,491.318,235.318z")
+                                path.path(d="M491.318,78.439H20.682C9.26,78.439,0,87.699,0,99.121c0,11.422,9.26,20.682,20.682,20.682h470.636c11.423,0,20.682-9.26,20.682-20.682C512,87.699,502.741,78.439,491.318,78.439z")
+                                path.path(d="M491.318,392.197H20.682C9.26,392.197,0,401.456,0,412.879s9.26,20.682,20.682,20.682h470.636c11.423,0,20.682-9.259,20.682-20.682S502.741,392.197,491.318,392.197z")
+                        a.header__logo(href="/")
+                    .header__mobile.col-3.col-lg-12.text-right.text-lg-left              
+                        .header__link
+                            a.header__phone(href="tel:89516878063") 8 (951) 687-80-63
+                        .header__link.d-lg-hidden
+                            a.header__call#callModal(href="#") Заказать звонок
+                    .col-12.col-lg-12
+                        nav.navbar.d-lg-hidden
+                            .navbar__item
+                                a.navbar__link.navbar__link--active(href="/") Главная
+                            .navbar__item
+                                a.navbar__link(href="/catalog.html") Каталог продукции
+                            .navbar__item
+                                a.navbar__link(href="/about.html") О компании
+                            .navbar__item
+                                a.navbar__link(href="/page.html") Доставка и оплата
+                            .navbar__item
+                                a.navbar__link(href="/contact.html") Контакты
+nav.navbar-mobile
+    .navbar__item
+        a.navbar__link.navbar__link--active(href="/") Главная
+    .navbar__item
+        a.navbar__link(href="/catalog.html") Каталог продукции
+    .navbar__item
+        a.navbar__link(href="/about.html") О компании
+    .navbar__item
+        a.navbar__link(href="/page.html") Доставка и оплата
+    .navbar__item
+        a.navbar__link(href="/contact.html") Контакты

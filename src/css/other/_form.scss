@@ -44,14 +44,17 @@
     &_inline{
         display: flex;
         flex-wrap: wrap;
-        padding: 0 40px;
         margin-left: -5px;
         margin-right: -5px;
 
         .form__group{
-            flex: 0 0 50%;
-            max-width: 50%;
+            flex: 0 0 100%;
+            max-width: 100%;
             padding: 0 5px;
+
+            & + .form__group{
+                margin-top: 20px;
+            }
 
             .form__input,
             .btn{
@@ -70,11 +73,11 @@
             background: $grey;
             color: $white;
             text-align: center;
-            padding: 40px;
+            padding: 20px;
             margin-bottom: 0;
         }
         .form__content{
-            padding: 40px 60px;
+            padding: 40px 20px;
             border: 1px solid $light;
 
             display: flex;
@@ -86,19 +89,11 @@
             }
 
             .form__group{
-                flex: 0 0 50%;
-                max-width: 50%;
-                padding: 0 5px;
-
-                &_full{
-                    flex: 0 0 100%;
-                    max-width: 100%;
-                }
-
+                flex: 0 0 100%;
+                max-width: 100%;
                 & + .form__group{
                     margin-top: 20px;
                 }
-
                 .btn{
                     width: 100%;
                 }
@@ -106,7 +101,7 @@
         }
     }
     &_mt{
-        margin-top: 60px;
+        margin-top: 20px;
     }
 }
 
@@ -153,5 +148,51 @@
     }
     &__link{
         text-decoration: underline;
+    }
+}
+
+@media all and (min-width: map-get($grid-breakpoints, 'md')){
+    .form{
+        // One Line FOrm
+        &_inline{
+            .form__group{
+                flex: 0 0 50%;
+                max-width: 50%;
+                padding: 0 5px;
+
+                & + .form__group{
+                    margin-top: 0px;
+                }
+            }
+        }
+        // Block Form
+        &_block{
+            .form__title{
+                padding: 40px;
+            }
+            .form__content{
+                padding: 40px 60px;
+                .form__group{
+                    flex: 0 0 50%;
+                    max-width: 50%;
+                    padding: 0 5px;
+                    &_full{
+                        flex: 0 0 100%;
+                        max-width: 100%;
+                    }
+                }
+            }
+        }
+        &_mt{
+            margin-top: 60px;
+        }
+    }
+}
+@media all and (min-width: map-get($grid-breakpoints, 'lg')){
+    .form{
+        // One Line FOrm
+        &_inline{
+            padding: 0 40px;
+        }
     }
 }

@@ -2,6 +2,8 @@
     &-image{
         position: relative;
         z-index: 11;
+        margin-top: 20px;
+        margin-bottom: 20px;
     }
     
     .item__title{
@@ -10,7 +12,7 @@
 
         &:after{
             content: '';
-            display: block;
+            display: none;
 
             background: $light;
             width: 150px;
@@ -20,7 +22,8 @@
             top: 50%;
             left: 0;
 
-            transform: translateX(-180px);
+            transform: translateX(-160px);
+            
         }
     }
     .item__desc{
@@ -37,10 +40,10 @@
     }
 
     // Right Text Col
-    &.text-right{
+    &.text-lg-right{
         .item__title{
             &:after{
-                transform: translateX( calc(100% + 180px) );
+                transform: translateX( calc(100% + 140px) );
             }
         }
         .item__desc{
@@ -48,8 +51,41 @@
             margin-left: auto;
         }
     }
-    // Col With Padding
-    &_padding{
-        padding-left: 180px;
+    
+}
+@media all and (min-width: map-get($grid-breakpoints, 'lg')){
+    .item{
+        &-image{
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+        .item__title{
+            &:after{
+                display: block;
+            }
+        }
+        // Col With Padding
+        &_padding{
+            padding-left: 180px;
+            .item__title:after{
+                transform: translateX(-180px);
+            }
+        }
+    }
+}
+@media all and (min-width: map-get($grid-breakpoints, 'xl')){
+    .item{
+        .item__title{
+            &:after{
+                transform: translateX(-180px);
+            }
+        }
+        &.text-lg-right{
+            .item__title{
+                &:after{
+                    transform: translateX( calc(100% + 180px) );
+                }
+            }
+        }
     }
 }

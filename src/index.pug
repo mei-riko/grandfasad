@@ -5,48 +5,48 @@ html(lang="ru")
         include chunks/header.pug
         main
             section.slider.slider_index
+                .slider__image
+                    .slider__item(style="background-image: url('/img/demo-bg-1.jpg');")
+                    .slider__item(style="background-image: url('/img/demo-bg-2.jpg');")
                 .slider__content.slider__content_fixed
                     h1.slider__title Панели из&nbsp;натурального камня для&nbsp;интерьера и&nbsp;внешней отделки
                     p.slider__intro Неповторимый каменный узор складывается в&nbsp;причудливый орнамент, который обязательно 
                         | станет гармоничным дополнением оформления вашего дома.
                     a.btn.btn_dark(href="/caralog.html") В каталог
-                .slider__image
-                    .slider__item(style="background-image: url('/img/demo-bg-1.jpg');")
-                    .slider__item(style="background-image: url('/img/demo-bg-2.jpg');")
             section.content.advantage
                 .container
                     .row
-                        .col-xl-3
+                        .col-xl-3.col-lg-3
                             p.content__title Преимущества панелей из&nbsp;камня
-                        .col-xl-8
+                        .col-xl-8.col-lg-9
                             p.content__intro Материал полностью экологичный и гипоаллергенный, идеально подходит для отделки как фасадов домов и зданий, так и для декора интерьера. Панели из камня морозостойкие, не восприимчивы к влаге и другим даже самым агрессивным внешним воздействиям, что обеспечивает вечный срок службы.
                             .row
-                                .col-xl-6.advantage__item
+                                .col-6.col-xl-6.advantage__item
                                     p.advantage__number 001
                                     p.advantage__title Вечный материал
                                     p.advantage__content.last Камень не изнашивается и&nbsp;не&nbsp;стирается, в&nbsp;отличие 
                                         | от&nbsp;других покрытий
-                                .col-xl-6.advantage__item
+                                .col-6.col-xl-6.advantage__item
                                     p.advantage__number 002
                                     p.advantage__title Простой монтаж
                                     p.advantage__content.last Укладка панелей не&nbsp;требует специальных навыков 
                                         | и&nbsp;материалов
-                                .col-xl-6.advantage__item.mb-0
+                                .col-6.col-xl-6.advantage__item.mb-xl-0
                                     p.advantage__number 003
                                     p.advantage__title Универсальность 
                                     p.advantage__content.last Панели из&nbsp;камня идеально подходят для&nbsp;интерьера 
                                         | и&nbsp;фасада
-                                .col-xl-6.advantage__item.mb-0
+                                .col-6.col-xl-6.advantage__item.mb-0
                                     p.advantage__number 004
                                     p.advantage__title Уникальный дизайн
                                     p.advantage__content.last Каждый рисунок панели - неповторимое сочетание каменных узоров и&nbsp;цветов 
             section.content.content_pt-none
                 .container
                     .row.align-items-center
-                        .col-xl-7
+                        .col-xl-7.col-lg-6
                             img.img-fluid(src="/img/products-type-01.png")
-                        .col-xl-5
-                            .content__col_pl
+                        .col-xl-5.col-lg-6
+                            .content__col.content__col_pl
                                 h2 Панели из камня 
                                     span.text-bold для фасада
                                 p.item__desc.small Хотите выделить фасад своего дома среди других построек? Закажите отделку 
@@ -55,9 +55,9 @@ html(lang="ru")
                                     | и не потеряет оттенок даже в самых суровых климатических условиях. 
                                     | Панели из камня помогут защитить фасад от осадков 
                                     | и&nbsp;влажности, а&nbsp;также придадут дому оригинальный внешний вид.
-                    .row.align-items-center
-                        .col-xl-5
-                            .content__col_pr
+                    .row.align-items-center.flex-column-reverse.flex-lg-row
+                        .col-xl-5.col-lg-6
+                            .content__col.content__col_pr
                                 h2 Панели из камня 
                                     span.text-bold для интерьера
                                 p.item__desc.small Сделайте свой интерьер роскошным и элегантным при помощи панелей 
@@ -66,13 +66,13 @@ html(lang="ru")
                                     | в&nbsp;тренде: что может быть лучше, чем отделка интерьера натуральным камнем?
                                 p.small.last Материал не&nbsp;покрывается мхом и&nbsp;плесенью, не деформируется 
                                     | и&nbsp;сохраняет свой внешний вид даже в самых экстремальных условиях. 
-                        .col-xl-7
+                        .col-xl-7.col-lg-6
                             img.img-fluid(src="/img/products-type-02.png")
             section.content.catalog.catalog_dark
                 .container
                     p.content__title.catalog__title Хиты продаж
                     .row
-                        .col-xl-6
+                        .col-md-6.col-lg-4.col-xl-6
                             a.product(href="/product.html")
                                 .product__image
                                     .product__image__style(style="background-image: url('/img/product-style-1.jpg');")
@@ -82,7 +82,7 @@ html(lang="ru")
                                     span.sep —
                                     span.product_article АРТ. 001
                                 .product__name Сланец изумрудный 
-                        .col-xl-3
+                        .col-md-6.col-lg-4.col-xl-3
                             a.product(href="/product.html")
                                 .product__image
                                     .product__image__style(style="background-image: url('/img/product-style-1.jpg');")
@@ -92,7 +92,7 @@ html(lang="ru")
                                     span.sep —
                                     span.product_article АРТ. 002
                                 .product__name Шунгит 
-                        .col-xl-3
+                        .col-md-6.col-lg-4.col-xl-3
                             a.product(href="/product.html")
                                 .product__image
                                     .product__image__style(style="background-image: url('/img/product-style-1.jpg');")
@@ -102,7 +102,7 @@ html(lang="ru")
                                     span.sep —
                                     span.product_article АРТ. 003
                                 .product__name Песчаник тигровый
-                        .col-xl-4
+                        .col-md-6.col-lg-4.col-xl-4
                             a.product(href="/product.html")
                                 .product__image
                                     .product__image__style(style="background-image: url('/img/product-style-1.jpg');")
@@ -112,7 +112,7 @@ html(lang="ru")
                                     span.sep —
                                     span.product_article АРТ. 008
                                 .product__name Кварцит золотистый 
-                        .col-xl-4
+                        .col-md-6.col-lg-4.col-xl-4
                             a.product(href="/product.html")
                                 .product__image
                                     .product__image__style(style="background-image: url('/img/product-style-1.jpg');")
@@ -122,7 +122,7 @@ html(lang="ru")
                                     span.sep —
                                     span.product_article АРТ. 009
                                 .product__name Златолит серо-зеленый 
-                        .col-xl-4
+                        .col-md-6.col-lg-4.col-xl-4
                             a.product(href="/product.html")
                                 .product__image
                                     .product__image__style(style="background-image: url('/img/product-style-1.jpg');")
@@ -134,18 +134,18 @@ html(lang="ru")
                                 .product__name Златолит серо-зеленый темный
             section.content
                 .container
-                    p.content__title.content__title_full.text-center Как мы работаем? 
+                    p.content__title.content__title_full.text-lg-center Как мы работаем? 
                     .row.justify-content-center.align-items-center
-                        .col-xl-3
-                            .item.text-right
+                        .col-md-6.col-lg-4.col-xl-3
+                            .item.text-lg-right
                                 p.item__title.text-bold.text-uppercase 1. Заказ и осмотр
                                 p.item__desc.small Оставляете заявку на нужный материал перед посещением магазина или выставочного зала
-                            .item.text-right
+                            .item.text-lg-right
                                 p.item__title.text-bold.text-uppercase 3. Изготовление
                                 p.item__desc.small В оговоренные сроки мы изготавливаем панели из камня
-                        .col-xl-4
+                        .col-lg-4.col-xl-4.d-md-none.d-lg-block
                             img.img-fluid.item-image(src="/img/image-section.png" width="300")
-                        .col-xl-3
+                        .col-md-6.col-lg-4.col-xl-3
                             .item
                                 p.item__title.text-bold.text-uppercase 2. Договор
                                 p.item__desc.small Мы заключаем договор и вы вносите предоплату в размере 50%
@@ -153,7 +153,7 @@ html(lang="ru")
                                 p.item__title.text-bold.text-uppercase 4. Поставка
                                 p.item__desc.small Доставляем панели, проводим окончательный расчет, при необходимости их монтируем.
                     .row.justify-content-center
-                        .col-xl-6        
+                        .col-lg-8.col-xl-6 
                             p.h1.text-center Сделайте 
                                 span.text-bold первый шаг навстречу 
                                 | эксклюзивному дизайну
@@ -171,7 +171,7 @@ html(lang="ru")
                 .map__info
                     .container
                         .row
-                            .col-xl-4
+                            .col-lg-5.col-xl-4
                                 .block
                                     p.block__title 
                                         span.name Телефон
@@ -184,9 +184,7 @@ html(lang="ru")
                                         li.map__item ИНН: 7840084979 
                                         li.map__item КПП: 784001001
                                         li.map__item Адрес: 191002, Российская Федерация,  город Санкт-Петербург,  переулок Свечной, дом 2/12, лит. А, пом. 8Н.
-
         include chunks/footer.pug
-        
         script(src="./js/jquery.inputmask.js")
         script(src="./js/slick.min.js")
         script(src="./js/app.min.js")

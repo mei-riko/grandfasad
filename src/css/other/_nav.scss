@@ -8,6 +8,26 @@
             margin: 0 10px;
         }
     }
+    &_mobile{
+        position: fixed;
+        z-index: 102;
+        background: #fff;
+        height: 100%;
+        min-height: 100vh;
+        padding: 30px;
+        box-shadow: 2px 0px 20px rgba(0, 0, 0, 0.1);
+
+        transform: translateX(calc(-100% - 20px)) ;
+        transition: .4s;        
+        &--active{
+            transform: translateX(0) ;
+        }
+        .navbar__item{
+            & + .navbar__item{
+                margin-top: 20px;
+            }
+        }
+    }
     
     .navbar__link{
         font-size: 12px;
@@ -24,6 +44,15 @@
 }
 .navbar-toggler{
     display: inline-block;
+    padding: 20px;
+    background: darken($light-bg,3%);
+    border-right: 1px solid $light-grey;
+
+    cursor: pointer;
+    transition: .4s;
+    &:hover{
+        background: darken($light-bg,6%);        
+    }
 }
 // Special For Navbar
 .index .header .navbar,
@@ -47,7 +76,8 @@
 }
 // Footer Navbar
 .footer .navbar{
-    display: flex;
+    display: none;
+    
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
@@ -62,7 +92,6 @@
         }
     }
 }
-
 // Nav Tabs
 .nav{
     list-style: none;
@@ -122,11 +151,19 @@
     .navbar-toggler{
         display: none;
     }
+    .navbar{
+        &_mobile{
+            display: none!important;
+        }
+    }
     .nav{
         .nav__link{
             padding-bottom: 40px;
             margin-bottom: 40px;
         }
+    }
+    .footer .navbar{
+        display: flex;
     }
 }
 @media all and (min-width: map-get($grid-breakpoints, 'xl')){

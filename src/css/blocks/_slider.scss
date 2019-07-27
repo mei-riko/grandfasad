@@ -2,25 +2,19 @@
     position: relative;
     .slider__content{
         &_fixed{
-            position: absolute;
-            left: 0;
-            bottom: 0;
 
             background: $white;
             max-width: 100%;
-            width: 580px;
+            width: 500px;
 
-            padding: 40px;
-            padding-left: 0;
+            padding: 20px;
 
             z-index: 2;
         }
-        
     }
     .slider__image{
         .slick-prev, .slick-next{
-            top: auto;
-            bottom: 0;
+            top: 0px;
             transform: translateY(0px);
 
             background: $grey;
@@ -53,6 +47,7 @@
         margin-top: 40px;
         .slick-track{
             margin-left: 0;
+            transform: translate3d(0px, 0px, 0px)!important;
             .slider__item{
                 margin-right: 20px;
                 border: 6px solid;
@@ -74,15 +69,19 @@
     }
 
     &_index{
-        max-width: calc( 25% + 700px );
+        max-width: 100%;
         margin-left: auto;
         z-index: 11;
         
         .slider__item{
-            height: 90vh;
-            min-height: 500px;
+            height: 300px;
             background-position: center;
             background-size: cover;
+        }
+        .slider__image{
+            .slick-prev, .slick-next{
+                top: 220px;
+            }
         }
         .slider__content{
             .btn{
@@ -91,7 +90,7 @@
             }
         }
         .slider__title{
-            font-size: 2.25rem;
+            font-size: 1.75rem;
             line-height: 1.25em;
             margin-bottom: 2rem;
         }
@@ -99,10 +98,74 @@
             font-size: 1.15rem;
             line-height: 1.5em;
             margin-bottom: 2.25rem;
+            &.last{
+                margin-bottom: 0;
+            }
         }
     }
-
     &_for{
         margin-bottom: 40px;
+        .slider__image{
+            .slick-prev, .slick-next{
+                top: auto;
+                bottom: 0;
+            }
+        }
+    }
+}
+@media all and (min-width: map-get($grid-breakpoints, 'md')){
+    .slider{
+        .slider__image{
+            .slick-prev, .slick-next{
+                top: auto;
+                bottom: 0;
+            }
+        }
+        .slider__content{
+            padding: 40px;
+            height: auto;
+            &_fixed{
+                position: absolute;
+                left: 0;
+                bottom: 0;
+            }
+        }
+        &_index{
+            .slider__item{
+                height: 90vh;
+                min-height: 500px;
+                margin-bottom: 0px;
+            }
+            .slider__title{
+                font-size: 2rem;
+            }
+        }
+    }
+}
+@media all and (min-width: map-get($grid-breakpoints, 'lg')){
+    .slider{
+        &_index{
+            max-width: calc( 25% + 480px );        
+            .slider__item{
+                height: 90vh;
+                min-height: 500px;
+                margin-bottom: 0px;
+            }
+        }
+    }
+}
+@media all and (min-width: map-get($grid-breakpoints, 'xl')){
+    .slider{
+        .slider__content{
+            &_fixed{
+                width: 580px;
+            }
+        }
+        &_index{
+            max-width: calc( 25% + 700px );
+            .slider__title{
+                font-size: 2.25rem;
+            }
+        }
     }
 }

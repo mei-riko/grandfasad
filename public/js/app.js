@@ -120,22 +120,21 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
     asNavFor: '.slider_for .slider__image',
     dots: false,
     centerMode: false,
-    focusOnSelect: true
+    focusOnSelect: true,
+    infinite: false
   });
 
   // Navbar
-  // if( $("body").scrollTop() > 100 ){
-  //     $(".index .header .navbar").fadeOut();
-  // }
-
-  // $(window).scroll(function(){
-  //     var scroll=$(document).scrollTop();
-  //     if( scroll > 100 ){
-  //         $(".index .header .navbar").fadeOut();
-  //     }else{
-  //         $(".index .header .navbar").fadeIn();
-  //     }
-  // });
+  (0, _jquery2.default)(".header .navbar-toggler").on("click", function () {
+    (0, _jquery2.default)(".navbar.navbar_mobile").toggleClass("navbar_mobile--active");
+  });
+  (0, _jquery2.default)(document).mouseup(function (e) {
+    // событие клика по веб-документу
+    var navbar = (0, _jquery2.default)(".navbar.navbar_mobile.navbar_mobile--active"); // тут указываем ID элемента
+    if (!navbar.is(e.target) && navbar.has(e.target).length === 0) {
+      navbar.removeClass("navbar_mobile--active");
+    }
+  });
 
   // Maps
   if ((0, _jquery2.default)('#map').length > 0) {

@@ -1,14 +1,5 @@
 .content{
     padding: 40px 0;
-
-    .content__col{
-        &_pl{
-            padding-left: 40px;
-        }
-        &_pr{
-            padding-right: 40px;
-        }
-    }
     .content__title{
         font-weight: 700;
         letter-spacing: 2px;
@@ -16,13 +7,15 @@
         text-transform: uppercase;
         &_full{
             @extend .h1;
-            margin-bottom: 60px;
+            margin-bottom: 40px;
         }
     }
     .content__intro{
-        margin-bottom: 60px;
+        margin-bottom: 40px;
     }
-
+    .content__col{
+        padding-top: 40px;
+    }
     .row + .row{
         padding-top: 80px;
     }
@@ -88,9 +81,39 @@
 
 @media all and (min-width: map-get($grid-breakpoints, 'md')){
     .content{
-        padding: 100px 0;
+        padding: 60px 0;
+
+        .content__intro{
+            margin-bottom: 60px;
+        }
+
         &_seo{
             padding: 60px 0;
+        }
+        &_pt-none{
+            padding-top: 0;
+        }
+    }
+}
+@media all and (min-width: map-get($grid-breakpoints, 'lg')){
+    .content{
+        padding: 100px 0;
+        .content__title{
+            &_full{
+                margin-bottom: 60px;
+            }
+        }
+        .content__col{
+            padding-top: 0;
+            &_pl{
+                padding-left: 40px;
+            }
+            &_pr{
+                padding-right: 40px;
+            }
+        }
+        &_pt-none{
+            padding-top: 0;
         }
     }
 }
