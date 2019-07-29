@@ -83,6 +83,8 @@
     .footer{
         .footer__contact{
             letter-spacing: 0px;
+            flex-direction: column;
+            text-align: right;
             .footer__item + .footer__item{
                 margin-left: 0;
             }
