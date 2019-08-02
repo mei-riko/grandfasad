@@ -155,7 +155,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
   // Maps
   if ((0, _jquery2.default)('#map').length > 0) {
-    var coordinates = { lat: 59.92577096038783, lng: 30.347231626510624 };
+    var coordinates = { lat: 59.87618673092533, lng: 30.283030271857573 };
 
     var map = new google.maps.Map(document.getElementById('map'), {
       center: coordinates,
@@ -273,7 +273,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
       }]
     });
 
-    var contentString = '<p>город Санкт-Петербург,  переулок Свечной, дом 2/12, лит. А, пом. 8Н.</p>';
+    var contentString = '<p>город Санкт-Петербург,  улица Броневая, дом 16</p>';
 
     var infowindow = new google.maps.InfoWindow({
       content: contentString

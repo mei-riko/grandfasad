@@ -1,9 +1,5 @@
 .advantage{
 
-    // & + .content{
-    //     padding-top: 0;
-    // }
-
     &__item{
         margin-bottom: 30px;
         &.mb-0{
@@ -64,7 +60,7 @@
     }
     .advantage__content{
         @extend .small;
-        width: 320px;
+        width: 300px;
         max-width: 100%;
     }
 }
