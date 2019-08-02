@@ -1,7 +1,80 @@
 .compare{
     background: #fafafa;
-
+    .compare__row{
+        margin: 0;
+    }
     .compare__col{
         text-align: center;
+        padding: 0;
+        background: #fff;
+
+        &_success{
+            .compare__title{
+                border-top: 10px solid $blue;
+            }
+        }
+    }
+    .compare__title{
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin-bottom: 0;
+
+        padding: 20px;
+        background: #fff;
+        border-top: 10px solid #dbd5c8;
+        border-bottom: 4px solid #fafafa;
+    }
+    .compare__content{
+        background: #fff;
+        padding: 20px;
+    }
+    .compare__subtitle{
+        text-transform: uppercase;
+        font-size: 12px;
+        line-height: 1.3em;
+        margin-bottom: .5em;
+        color: $light-grey;
+    }
+    .compare__desc{
+        font-size: 12px;
+        & + .compare__subtitle{
+            margin-top: 2em;
+        }
+        &.lead{
+            font-size: 1.25rem;
+        }
+    }
+    .compare__footer{
+        background: $grey;
+        color: $white;
+        margin: 0;
+        padding: 10px;
+        font-weight: 600;
+        text-align: center;
+    }
+}
+
+@media all and (min-width: map-get($grid-breakpoints, 'sm')){
+    .compare{
+        .compare__content{
+            padding: 40px;
+        }
+        
+        .compare__col{
+            &_left{
+                border-right: 2px solid #fafafa;
+            }
+            &_right{
+                border-left: 2px solid #fafafa;
+            }
+        }
+    }
+}
+@media all and (min-width: map-get($grid-breakpoints, 'md')){
+    .compare{
+        .compare__desc{
+            font-size: 14px;
+        }
     }
 }
