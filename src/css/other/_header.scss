@@ -123,12 +123,19 @@ main{
 }
 @media all and (min-width: map-get($grid-breakpoints, 'xl')){
     .header{
+    .index .header,
         .header__phone{
-            font-size: 16px;
+            font-size: 17px;
             letter-spacing: 2px;
         }
         .container{
             max-width: 1400px;
+        }
+    }
+    .index .header,
+    .company .header{
+        .header__phone{
+            margin-bottom: 4px;
         }
     }
 }

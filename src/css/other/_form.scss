@@ -2,13 +2,13 @@
     .form__input{
         font-size: 12px;
         font-weight: 700;
-        line-height: 1.2em;
+        line-height: 16px;
         padding: 19px 50px;
     
         text-transform: uppercase;
         letter-spacing: 2px;
     
-        text-align: center;
+        // text-align: center;
 
         border: 1px solid #eee6d6;
 
@@ -32,6 +32,9 @@
         &_full{
             width: 100%;
         }
+    }
+    .form__date{
+        max-height: 56px;
     }
 
     .form__agree{

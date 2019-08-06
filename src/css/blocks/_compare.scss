@@ -22,7 +22,7 @@
 
         padding: 20px;
         background: #fff;
-        border-top: 10px solid #dbd5c8;
+        border-top: 10px solid #dad1c0;
         border-bottom: 4px solid #fafafa;
     }
     .compare__content{
@@ -46,21 +46,24 @@
         }
     }
     .compare__footer{
-        background: $grey;
-        color: $white;
+        background: #eee;
+        color: #adadad;
+        letter-spacing: 1px;
         margin: 0;
         padding: 10px;
+
         font-weight: 600;
         text-align: center;
+
+        display: none;
     }
 }
 
 @media all and (min-width: map-get($grid-breakpoints, 'sm')){
     .compare{
         .compare__content{
-            padding: 40px;
+            padding: 20px;
         }
-        
         .compare__col{
             &_left{
                 border-right: 2px solid #fafafa;
@@ -69,12 +72,18 @@
                 border-left: 2px solid #fafafa;
             }
         }
+        .compare__footer{
+            display: block;
+        }
     }
 }
 @media all and (min-width: map-get($grid-breakpoints, 'md')){
     .compare{
         .compare__desc{
-            font-size: 14px;
+            @extend .text-md-small;
+        }
+        .compare__content{
+            padding: 40px;
         }
     }
 }

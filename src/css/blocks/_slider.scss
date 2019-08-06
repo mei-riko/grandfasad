@@ -2,14 +2,12 @@
     position: relative;
     .slider__content{
         &_fixed{
-
             background: $white;
             max-width: 100%;
-            width: 500px;
-
-            padding: 20px;
-
+            width: 540px;
+            padding: 40px 20px;
             z-index: 2;
+            margin: 0 auto;
         }
     }
     .slider__image{
@@ -47,7 +45,7 @@
         margin-top: 40px;
         .slick-track{
             margin-left: 0;
-            transform: translate3d(0px, 0px, 0px)!important;
+            // transform: translate3d(0px, 0px, 0px)!important;
             .slider__item{
                 margin-right: 20px;
                 border: 6px solid;
@@ -146,6 +144,9 @@
 }
 @media all and (min-width: map-get($grid-breakpoints, 'lg')){
     .slider{
+        .slider__content{
+            padding-left: 0;
+        }
         &_index{
             max-width: calc( 25% + 480px );        
             .slider__item{

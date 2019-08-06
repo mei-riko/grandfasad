@@ -45,6 +45,13 @@
         </div>
       </div>
     </header>
+    <nav class="navbar navbar_mobile">
+      <div class="navbar__item"><a class="navbar__link navbar__link--active" href="/">Главная</a></div>
+      <div class="navbar__item"><a class="navbar__link" href="/catalog.html">Каталог продукции</a></div>
+      <div class="navbar__item"><a class="navbar__link" href="/about.html">О компании</a></div>
+      <div class="navbar__item"><a class="navbar__link" href="/page.html">Доставка и оплата</a></div>
+      <div class="navbar__item"><a class="navbar__link" href="/contact.html">Контакты</a></div>
+    </nav>
     <main>
       <section class="slider slider_index">
         <div class="slider__image">
@@ -117,13 +124,16 @@
                 <p class="form__title">Заполните общую информацию и укажите желаемую дату</p>
                 <div class="form__content">
                   <div class="form__group form__group_full">
-                    <input class="form__input form__input_placeholder-top" type="text" placeholder="Фамилия имя отчество"/>
+                    <input class="form__input form__input_placeholder-top" type="text" placeholder="Имя"/>
                   </div>
                   <div class="form__group">
-                    <input class="form__input form__input_placeholder-top phone" type="tel" placeholder="Телефон для связи"/>
+                    <input class="form__input form__input_placeholder-top phone" type="tel" placeholder="Телефон для связи*"/>
                   </div>
                   <div class="form__group">
-                    <input class="form__input form__input_placeholder-top datapicker" type="date" placeholder="Дата посещения"/>
+                    <input class="form__input form__input_placeholder-top form__date" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="Желаемая дата"/>
+                  </div>
+                  <div class="form__group form__group_full">
+                    <textarea class="form__input form__input_placeholder-top" placeholder="Ваши пожелания перед просмотром" value=""></textarea>
                   </div>
                   <div class="form__group">
                     <div class="form__agree checkbox">

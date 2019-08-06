@@ -63,11 +63,13 @@ html(lang="ru")
                                 p.form__title Заполните общую информацию и укажите желаемую дату
                                 .form__content
                                     .form__group.form__group_full
-                                        input.form__input.form__input_placeholder-top(type="text" placeholder="Фамилия имя отчество")
+                                        input.form__input.form__input_placeholder-top(type="text" placeholder="Имя")
                                     .form__group
-                                        input.form__input.form__input_placeholder-top.phone(type="tel" placeholder="Телефон для связи")
+                                        input.form__input.form__input_placeholder-top.phone(type="tel" placeholder="Телефон для связи*")
                                     .form__group
-                                        input.form__input.form__input_placeholder-top.datapicker(type="date" placeholder="Дата посещения")
+                                        input.form__input.form__input_placeholder-top.form__date( type="text" onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="Желаемая дата")
+                                    .form__group.form__group_full
+                                        textarea.form__input.form__input_placeholder-top(placeholder="Ваши пожелания перед просмотром" value="")
                                     .form__group
                                         .form__agree.checkbox
                                             input.checkbox__input#agree(type="checkbox" name="agree" checked="checked" required="required")
@@ -102,4 +104,9 @@ html(lang="ru")
         
         script(src="./js/jquery.inputmask.js")
         script(src="./js/slick.min.js")
+
+        //- script(src="./datepicker/jquery-ui.min.js")
+        //- script(src="./datepicker/datepicker.js")
+        //- link(href='./datepicker/datepicker.min.css', rel='stylesheet')
+
         script(src="./js/app.min.js")
