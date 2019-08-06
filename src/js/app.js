@@ -58,10 +58,10 @@ $(document).ready(() =>{
     slidesToShow: 4,
     slidesToScroll: 1,
     asNavFor: '.slider_for .slider__image',
+    arrows: false,
     dots: false,
-    centerMode: false,
+    centerMode: true,
     focusOnSelect: true,
-    infinite: false,
   });
 
   // Navbar

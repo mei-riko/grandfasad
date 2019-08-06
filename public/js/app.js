@@ -135,10 +135,10 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
     slidesToShow: 4,
     slidesToScroll: 1,
     asNavFor: '.slider_for .slider__image',
+    arrows: false,
     dots: false,
-    centerMode: false,
-    focusOnSelect: true,
-    infinite: false
+    centerMode: true,
+    focusOnSelect: true
   });
 
   // Navbar
