@@ -36,9 +36,6 @@
         .product__name{
             color: $grey;
         }
-        .btn{
-            transform: translateY(0);
-        }
     }
 
     .product__image{
@@ -163,8 +160,6 @@
         width: 100%;
         padding-top: 10px;
         padding-bottom: 10px;
-
-        transform: translateY(calc(100% - 10px));
     }
 }
 
@@ -192,5 +187,18 @@
     }
     &__btn{
         margin-top: 40px;
+    }
+}
+
+@media all and (min-width: map-get($grid-breakpoints, 'sm')){
+    .product{
+        &:hover{
+            .btn{
+                transform: translateY(0);
+            }
+        }
+        .btn{    
+            transform: translateY(calc(100% - 10px));
+        }
     }
 }
