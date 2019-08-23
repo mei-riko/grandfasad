@@ -46,12 +46,7 @@
                 transform: translateX( calc(100% + 140px) );
             }
         }
-        .item__desc{
-            margin-right: 0;
-            margin-left: auto;
-        }
     }
-    
 }
 @media all and (min-width: map-get($grid-breakpoints, 'lg')){
     .item{
@@ -85,6 +80,10 @@
                 &:after{
                     transform: translateX( calc(100% + 180px) );
                 }
+            }
+            .item__desc{
+                margin-right: 0;
+                margin-left: auto;
             }
         }
     }

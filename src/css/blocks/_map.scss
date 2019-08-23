@@ -5,14 +5,10 @@
         width: 100%;
     }
     .map__info{
-        position: absolute;
-        top: 60px;
-        left: 0;
         width: 100%;
         .block{
             background: $white;
-            padding: 40px 60px;
-            box-shadow: 0px 5px 20px 0px rgba(21, 21, 21, 0.1);
+            padding: 40px 0px;
             @extend .small;
             
             .block__title{
@@ -34,6 +30,17 @@
         color: #8d8d8d;
         .map__item + .map__item{
             margin-top: .5rem;
+        }
+    }
+}
+@media all and (min-width: map-get($grid-breakpoints, 'lg')){
+    .map{
+        position: absolute;
+        top: 60px;
+        left: 0;
+        .block{
+            padding: 40px 60px;
+            box-shadow: 0px 5px 20px 0px rgba(21, 21, 21, 0.1);
         }
     }
 }
