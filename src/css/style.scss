@@ -31,6 +31,9 @@
 @import "blocks/item.scss";
 @import "blocks/map.scss";
 
+img{
+    max-width: 100%;
+}
 .modal{
     display: none;
     &_callSmall{
